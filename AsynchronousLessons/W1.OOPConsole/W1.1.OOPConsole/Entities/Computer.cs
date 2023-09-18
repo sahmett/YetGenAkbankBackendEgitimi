@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using W1._1.OOPConsole.Enums;
 
 namespace W1._1.OOPConsole.Entities
 {
@@ -13,6 +14,10 @@ namespace W1._1.OOPConsole.Entities
         public string Model { get; set; }
         public string CPU { get; set; }
         public string RAM { get; set; }
+
+        public string Storage { get; set; }
+        public int StorageSize { get; set; }
+        public CapacitySizeType StorageSizeTyoe { get; set; }
 
    
 
@@ -28,10 +33,23 @@ namespace W1._1.OOPConsole.Entities
             Model = model;
         }
 
-        public Computer(string brand, string model, string cPU, string rAM) : this(brand, model)
+        public Computer(string brand, string model, string cPU, string rAM, string storage, int storageSize, CapacitySizeType storageSizeTyoe) : this(brand, model)
         {
             CPU = cPU;
             RAM = rAM;
+            Storage = storage;
+            StorageSize = storageSize;
+            StorageSizeTyoe = storageSizeTyoe;
         }
+
+        /*
+        public Computer(string cPU, string rAM, string storage, int storageSize, CapacitySizeType storageSizeTyoe) : this(cPU,rAM)
+        {
+            Storage = storage;
+            StorageSize = storageSize;
+            StorageSizeTyoe = storageSizeTyoe;
+        }
+        */
+
     }
 }

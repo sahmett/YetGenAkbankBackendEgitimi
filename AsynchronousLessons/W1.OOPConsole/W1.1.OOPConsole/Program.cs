@@ -1,4 +1,5 @@
 ﻿using W1._1.OOPConsole.Entities;
+using W1._1.OOPConsole.Enums;
 
 internal class Program
 {
@@ -35,9 +36,12 @@ internal class Program
             RAM = "16 GB",
         };
 
-        Computer cmp2 = new Computer("Apple", "Macbook Air", "Intel i5", "8 GB");
+       // Computer cmp2 = new Computer("Apple", "Macbook Air", "Intel i5", "8 GB");
         Computer cmp3 = new Computer("Apple", "Macbook Air");
+        Computer cmp4 = new Computer("Apple", "Macbook Air", "Intel i5", "8 GB", "WD Blue", 1, CapacitySizeType.MB);
 
-        Console.WriteLine($"Marka: {cmp2.Id} {cmp2.Brand} {cmp2.Model} {cmp2.CPU} {cmp2.RAM} ");
+
+
+        Console.WriteLine($"Marka: {cmp4.Id} {cmp4.Brand} {cmp4.Model} {cmp4.CPU} {cmp4.RAM} ");
     }
 }
