@@ -63,6 +63,34 @@ internal class Program
         Enum (Numaralandırma): Sembolik adlarla sabit değerlerin temsil edildiği bir türdür, sınırlı bir küme değerler içerir.
 
         */
+
+        /* Notlar İki
+         
+        OOP Yaklaşımı:
+        Dil bağımsızdır ve Java, C# gibi dillerde kullanılabilir.
+        Amaçları; kodun okunabilirliğini, tekrar kullanılabilirliğini artırmak ve bakım maliyetlerini düşürmektir.
+
+        Instance: 
+        Bir sınıftan türetilen nesnedir.
+
+        Property: 
+        Bir nesnenin özelliklerini ifade eder.
+
+        Constructor: 
+        Nesne oluşturulduğunda çalışan bir metottur.
+        Parametre alabilir ve varsayılan constructor'ı eğer biz bir constructor yazarsak siler.
+        
+        Entity: 
+        Veritabanında her bir entity için bir tablo oluşturulur. 
+        Entity'lerin özellikleri veritabanındaki sütunlara denk gelir.
+        Her bir entity instance, veritabanındaki tabloların bir satırını temsil eder. 
+        Her entity, instancelarını eşsiz kılan bir Id gibi bir özelliğe sahip olmalıdır.
+
+        Value Object: Veritabanına tablo olarak yansıtılmazlar. Kod tarafında verileri gruplamak için kullanılırlar. Unique bir Id'leri yoktur.
+        */
+
+
+
         /* Sorular Uzun cevap
                 Entity Nedir?
         Bir "Entity" (varlık), genellikle bir veritabanı tablosunu veya bir veri kaynağındaki benzersiz bir öğeyi temsil eder.
