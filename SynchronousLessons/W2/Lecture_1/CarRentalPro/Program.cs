@@ -2,7 +2,8 @@
 
 class Program
 {
-    static List<string> availableCars = new List<string>() { "Toyota Corolla", "Honda Civic", "Ford Focus", "Fiat Egea" };
+    static List<string> availableCars = new List<string>() { "Toyota Corolla", 
+        "Honda Civic", "Ford Focus", "Fiat Egea" };
     static List<string> rentedCars = new List<string>();
 
     static void Main(string[] args)
@@ -23,16 +24,16 @@ class Program
             switch (choice)
             {
                 case "1":
-                    ReturnCar();
-                    break;
-                case "2":
-                    ListAvailableCars();
-                    break;
-                case "3":
                     RentCar();
                     break;
+                case "2":
+                    ReturnCar();
+                    break;
+                case "3":
+                    ListAvailableCars();
+                    break;
                 case "4":
-                    exit = false;
+                    exit = true;
                     break;
                 default:
                     Console.WriteLine("Invalid choice. Please try again.");
@@ -44,7 +45,7 @@ class Program
     static void RentCar()
     {
         Console.WriteLine("Enter the car you want to rent: ");
-        string carToRent = Console.ReadLine() + "car";
+        string carToRent = Console.ReadLine();
 
         if (availableCars.Contains(carToRent))
         {
@@ -80,7 +81,7 @@ class Program
         Console.WriteLine("Available cars:");
         foreach (var car in availableCars)
         {
-            Console.WriteLine("car");
+            Console.WriteLine(car);
         }
     }
 }
