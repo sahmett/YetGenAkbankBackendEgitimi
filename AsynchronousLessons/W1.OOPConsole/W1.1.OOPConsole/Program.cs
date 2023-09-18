@@ -14,9 +14,12 @@ Student st2 = new Student()
     LastName = "Bayram",
 };
 
+Student st3 = new Student(12, "Murat", "Sultan");
+
 
 
 Console.WriteLine($"Name:{st.FirstName} LastName:{st.LastName} ID: {st.Id}");
 Console.WriteLine($"Name:{st2.FirstName} LastName:{st2.LastName} ID: {st2.Id}");
+Console.WriteLine($"Name:{st3.FirstName} LastName:{st3.LastName} ID: {st3.Id}");
 
 

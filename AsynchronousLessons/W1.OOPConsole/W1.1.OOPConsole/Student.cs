@@ -10,6 +10,16 @@ namespace Program_2
 
 
 
+        public Student(int ıd, string firstName, string lastName)
+        {
+            Id = ıd;
+            FirstName = firstName;
+            LastName = lastName;
+        }
+        public Student() { }
+
+
+
     }
 
 
