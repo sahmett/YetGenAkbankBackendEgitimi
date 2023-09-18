@@ -5,7 +5,7 @@ using W1._1.OOPConsole.ValueObjects;
 
 internal class Program
 {
-    private static void Main(string[] args)
+    private static void Main(string[] args, W1._1.OOPConsole.Entities.Guest guest1)
     {
         /*Student st = new Student()
         {
@@ -51,6 +51,12 @@ internal class Program
         Computer cmp4 = new Computer("Apple", "Macbook Air", "Intel i5", RAM, storage);
         Console.WriteLine($"ID: {cmp4.Id} Marka {cmp4.Brand} Model {cmp4.Model} CPU {cmp4.CPU} RAM {cmp4.RAM.Brand} {cmp4.RAM.Capacity.Size}  {cmp4.Storage.Capacity.Size} {cmp4.Storage.Brand} ");
 
+        //W1._1.OOPConsole.Entities.Guest guest1 = new W1._1.OOPConsole.Entities.Guest("Yeliz", "Akın", "12323423432", "0536 666 2266");
+        W1._1.OOPConsole.ValueObjects.Guest guest2 = new W1._1.OOPConsole.ValueObjects.Guest("Hakan", "Akın", "12323423432", "0536 666 2266");
+
+        //Reservation reservation = new Reservation(guest1, new DateTime(2025, 10, 1), new DateTime(2025, 10, 5));
+        Reservation reservation2 = new Reservation(guest2, new DateTime(2025, 10, 1), new DateTime(2025, 10, 5));
+
         /*NOTLAR
         Entity nedir?
         Instance nedir?
@@ -88,8 +94,6 @@ internal class Program
 
         Value Object: Veritabanına tablo olarak yansıtılmazlar. Kod tarafında verileri gruplamak için kullanılırlar. Unique bir Id'leri yoktur.
         */
-
-
 
         /* Sorular Uzun cevap
                 Entity Nedir?
