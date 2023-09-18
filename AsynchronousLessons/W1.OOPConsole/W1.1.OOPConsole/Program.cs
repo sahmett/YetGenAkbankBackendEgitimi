@@ -48,5 +48,5 @@ internal class Program
 
         Computer cmp4 = new Computer("Apple", "Macbook Air", "Intel i5", RAM,storage);
         Console.WriteLine($"Marka: {cmp4.Id} {cmp4.Brand} {cmp4.Model} {cmp4.CPU} {cmp4.RAM.Brand} {cmp4.RAM.Size} {cmp4.Storage.Size} {cmp4.Storage.SizeType} ");
-    }s
+    }
 }

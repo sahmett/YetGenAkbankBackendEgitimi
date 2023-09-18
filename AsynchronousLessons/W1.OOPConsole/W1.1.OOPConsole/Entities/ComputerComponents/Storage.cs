@@ -7,7 +7,7 @@ using W1._1.OOPConsole.Enums;
 
 namespace W1._1.OOPConsole.Entities.ComputerComponents
 {
-    internal class Storage
+    public class Storage
     {
 
         public string Brand { get; set; }

@@ -9,7 +9,7 @@ using W1._1.OOPConsole.Enums;
 
 namespace W1._1.OOPConsole.Entities
 {
-    internal class Computer
+    public class Computer
     {
         public int Id { get; set; }
         public string Brand {  get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace W1._1.OOPConsole.Enums
 {
-    enum CapacitySizeType
+    public enum CapacitySizeType
     {
         KB = 0, MB = 1, GB = 2, TB = 3
     }

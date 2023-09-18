@@ -11,14 +11,23 @@ namespace W1._1.OOPConsole.Entities.ComputerComponents
     {
         public string Brand { get; set; }
         public int Size { get; set; }
+        public CapacitySizeType SizeType { get; set; }
 
+        public RAM() { }
+
+        public RAM(string brand, int size, CapacitySizeType sizeType)
+        {
+            Brand = brand;
+            Size = size;
+            SizeType = sizeType;
+        }
 
         public RAM(string brand, int size)
         {
             Brand = brand;
             Size = size;
         }
-        public RAM() { }
     }
 }
+
 
