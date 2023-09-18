@@ -9,16 +9,15 @@ namespace CarRentalPro.Entitiy
 {
     public class Car
     {
-        public Car(int ıd, string brand, string model)
+        public Car(string brand)
         {
-            Id = ıd;
+           
             Brand = brand;
-            Model = model;
+         
         }
 
-        public int Id { get; set; }
         public string Brand { get; set; }
-        public string Model { get; set; }
+     
     }
 
 }

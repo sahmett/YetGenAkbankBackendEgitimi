@@ -1,15 +1,8 @@
 ﻿namespace Lecture_1.Part_2.CarRentalPro;
+using
 
-class Program
+public class Program
 {
-    static List<string> availableCars = new List<string>() 
-    { 
-        "Toyota Corolla", 
-        "Honda Civic", 
-        "Ford Focus", 
-        "Fiat Egea" 
-    };
-    static List<string> rentedCars = new List<string>();
 
     static void Main(string[] args)
     {
@@ -47,46 +40,4 @@ class Program
         }
     }
 
-    static void RentCar()
-    {
-        Console.WriteLine("Enter the car you want to rent: ");
-        string carToRent = Console.ReadLine();
-
-        if (availableCars.Contains(carToRent))
-        {
-            availableCars.Remove(carToRent);
-            rentedCars.Add(carToRent);
-            Console.WriteLine("You have rented a " + carToRent);
-        }
-        else
-        {
-            Console.WriteLine("Sorry, the selected car is not available.");
-        }
-    }
-
-    static void ReturnCar()
-    {
-        Console.WriteLine("Enter the car you want to return: ");
-        string carToReturn = Console.ReadLine();
-
-        if (rentedCars.Contains(carToReturn)!)
-        {
-            rentedCars.Remove(carToReturn);
-            availableCars.Add(carToReturn);
-            Console.WriteLine("You have returned a " + carToReturn);
-        }
-        else
-        {
-            Console.WriteLine("Sorry, you did not rent this car from us.");
-        }
-    }
-
-    static void ListAvailableCars()
-    {
-        Console.WriteLine("Available cars:");
-        foreach (var car in availableCars)
-        {
-            Console.WriteLine(car);
-        }
-    }
 }
