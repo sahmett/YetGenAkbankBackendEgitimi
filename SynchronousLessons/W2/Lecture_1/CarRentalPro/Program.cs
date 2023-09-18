@@ -2,8 +2,13 @@
 
 class Program
 {
-    static List<string> availableCars = new List<string>() { "Toyota Corolla", 
-        "Honda Civic", "Ford Focus", "Fiat Egea" };
+    static List<string> availableCars = new List<string>() 
+    { 
+        "Toyota Corolla", 
+        "Honda Civic", 
+        "Ford Focus", 
+        "Fiat Egea" 
+    };
     static List<string> rentedCars = new List<string>();
 
     static void Main(string[] args)
