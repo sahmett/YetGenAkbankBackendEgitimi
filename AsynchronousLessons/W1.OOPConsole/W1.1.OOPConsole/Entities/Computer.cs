@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using W1._1.OOPConsole.Entities.ComputerComponents;
 using W1._1.OOPConsole.Enums;
 
 namespace W1._1.OOPConsole.Entities
@@ -13,13 +15,12 @@ namespace W1._1.OOPConsole.Entities
         public string Brand {  get; set; }
         public string Model { get; set; }
         public string CPU { get; set; }
-        public string RAM { get; set; }
 
-        public string Storage { get; set; }
-        public int StorageSize { get; set; }
-        public CapacitySizeType StorageSizeTyoe { get; set; }
 
-   
+        public Storage Storage { get; set; }
+        public RAM RAM { get; set; }
+
+
 
         public Computer() { 
         Random random = new Random();
@@ -33,13 +34,11 @@ namespace W1._1.OOPConsole.Entities
             Model = model;
         }
 
-        public Computer(string brand, string model, string cPU, string rAM, string storage, int storageSize, CapacitySizeType storageSizeTyoe) : this(brand, model)
+        public Computer(string brand, string model, string cPU, RAM rAM, Storage storage) : this(brand, model)
         {
             CPU = cPU;
             RAM = rAM;
             Storage = storage;
-            StorageSize = storageSize;
-            StorageSizeTyoe = storageSizeTyoe;
         }
 
         /*
