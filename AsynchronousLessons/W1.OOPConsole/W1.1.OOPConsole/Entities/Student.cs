@@ -1,6 +1,4 @@
-﻿
-
-namespace Program_2
+﻿namespace W1._1.OOPConsole.Entities
 {
     public class Student
     {
