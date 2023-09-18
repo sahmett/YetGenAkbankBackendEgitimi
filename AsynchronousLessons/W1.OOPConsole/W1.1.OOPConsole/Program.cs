@@ -1,12 +1,13 @@
 ﻿using W1._1.OOPConsole.Entities;
 using W1._1.OOPConsole.Entities.ComputerComponents;
 using W1._1.OOPConsole.Enums;
+using W1._1.OOPConsole.ValueObjects;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        Student st = new Student()
+        /*Student st = new Student()
         {
             Id = 1,
             FirstName = "Osman",
@@ -21,7 +22,7 @@ internal class Program
         };
 
         Student st3 = new Student(12, "Murat", "Sultan");
-
+        */
 
         /*
         Console.WriteLine($"Name:{st.FirstName} LastName:{st.LastName} ID: {st.Id}");
@@ -37,16 +38,27 @@ internal class Program
             //RAM = "16 GB",
         };
 
-       // Computer cmp2 = new Computer("Apple", "Macbook Air", "Intel i5", "8 GB");
+        // Computer cmp2 = new Computer("Apple", "Macbook Air", "Intel i5", "8 GB");
         Computer cmp3 = new Computer("Apple", "Macbook Air");
         // Computer cmp4 = new Computer("Apple", "Macbook Air", "Intel i5", "8 GB", "WD Blue", 1, CapacitySizeType.MB);
 
 
-        Storage storage = new Storage("WD Blue", 1, CapacitySizeType.MB);
+        //Storage storage = new Storage("WD Blue", 1, CapacitySizeType.MB);
+        Storage storage = new Storage("WD Blue", new Capacity(1, CapacitySizeType.MB));
 
-        RAM RAM = new RAM("WD Blue", 1);
+        RAM RAM = new RAM("WD Blue", new Capacity(1, CapacitySizeType.MB));
 
         Computer cmp4 = new Computer("Apple", "Macbook Air", "Intel i5", RAM,storage);
-        Console.WriteLine($"Marka: {cmp4.Id} {cmp4.Brand} {cmp4.Model} {cmp4.CPU} {cmp4.RAM.Brand} {cmp4.RAM.Size} {cmp4.Storage.Size} {cmp4.Storage.SizeType} ");
+        Console.WriteLine($"ID: {cmp4.Id} Marka {cmp4.Brand} Model {cmp4.Model} CPU {cmp4.CPU} RAM {cmp4.RAM.Brand} {cmp4.RAM.Capacity.Size}  {cmp4.Storage.Capacity.Size} {cmp4.Storage.Brand} ");
+
+        /*
+        NOTLAR
+        Entity nedir?
+        Value Object nedir?
+        Enum nedir?
+        */
+
+
+
     }
 }
