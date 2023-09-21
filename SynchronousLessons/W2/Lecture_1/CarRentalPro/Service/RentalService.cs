@@ -24,13 +24,17 @@ namespace CarRentalPro.Service
         public static void RentCar()
         {
             Console.WriteLine("Enter the car you want to rent: ");
-            Car string carToRent = Console.ReadLine();
+            string carToRent = Console.ReadLine();
 
-            if (availableCars.Contains(carToRent))
+            // if (availableCars.Brand.Contains(carToRent))
+            Car selectedCar = availableCars.FirstOrDefault(car => car.Brand == carToRent);
+            bool has = availableCars.Any(car => car.Brand == carToRent);
+
+            if (selectedCar != null)
             {
-                availableCars.Remove(carToRent);
-                rentedCars.Add(carToRent);
-                Console.WriteLine("You have rented a " + carToRent);
+                availableCars.Remove(selectedCar);
+                rentedCars.Add(selectedCar);
+                Console.WriteLine("You have rented a " + selectedCar.Brand);
             }
             else
             {
@@ -43,11 +47,13 @@ namespace CarRentalPro.Service
             Console.WriteLine("Enter the car you want to return: ");
             string carToReturn = Console.ReadLine();
 
-            if (rentedCars.Contains(carToReturn)!)
+            //if (rentedCars.Contains(carToReturn)!)
+            Car selectedCar = availableCars.FirstOrDefault(car => car.Brand == carToReturn);
+            if (selectedCar != null)
             {
-                rentedCars.Remove(carToReturn);
-                availableCars.Add(carToReturn);
-                Console.WriteLine("You have returned a " + carToReturn);
+                rentedCars.Remove(selectedCar);
+                availableCars.Add(selectedCar);
+                Console.WriteLine("You have returned a " + selectedCar.Brand);
             }
             else
             {
@@ -60,7 +66,7 @@ namespace CarRentalPro.Service
             Console.WriteLine("Available cars:");
             foreach (var car in availableCars)
             {
-                Console.WriteLine(car);
+                Console.WriteLine(car.Brand);
             }
         }
     }
