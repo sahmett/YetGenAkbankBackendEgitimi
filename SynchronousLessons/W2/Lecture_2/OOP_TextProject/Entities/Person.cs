@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_TextProject.Entities
 {
-    public class Person : PersonBase
+    public class Person 
     {
     }
 }

@@ -1,5 +1,6 @@
 ﻿
 using OOP_TextProject.Entities;
+using OOP_TextProject.Enums;
 using System.Text.Json;
 
 var filePath = "C:\\Users\\yelkenliler\\Downloads\\AccessControlLogs.txt";
@@ -20,6 +21,8 @@ foreach(var splitedLine in splitedLines)
         PersonId = Convert.ToInt64(lineValue[0]),
         DeviceSerialNo = lineValue[1],
         AccesType = AccessControlLog.ConvertStringToAccesType(lineValue[2]),
+        //AccesType = Enum.Parse(typeof(AccessType) lineValue[2]),
+
         LogTime = Convert.ToDateTime(lineValue[3]),
     };
 
@@ -27,5 +30,5 @@ foreach(var splitedLine in splitedLines)
 }
 
 Console.WriteLine(JsonSerializer.Serialize(logs));
-File.WriteAllText("C:\\Users\\yelkenliler\\Downloads\\Logs.txt",JsonSerializer.Serialize(logs));
+//File.WriteAllText("C:\\Users\\yelkenliler\\Downloads\\Logs.txt",JsonSerializer.Serialize(logs));
 Console.WriteLine("op. ok");
