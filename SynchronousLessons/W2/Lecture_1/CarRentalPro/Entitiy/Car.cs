@@ -9,6 +9,7 @@ namespace CarRentalPro.Entitiy
 {
     public class Car
     {
+        public string Brand { get; set; }
         public Car(string brand)
         {
            
@@ -16,8 +17,6 @@ namespace CarRentalPro.Entitiy
          
         }
 
-        public string Brand { get; set; }
-     
     }
 
 }

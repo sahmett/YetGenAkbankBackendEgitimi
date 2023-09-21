@@ -1,14 +1,18 @@
-﻿using CarRentalPro.Entitiy;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CarRentalPro.Entitiy;
 
-namespace CarRentalPro.Service
+namespace CarRentalPro
 {
     public class RentalService
     {
+        public RentalService()
+        {
+        }
+
         public static List<Car> availableCars = new List<Car>()
         {
         new Car("Toyota Corolla"),

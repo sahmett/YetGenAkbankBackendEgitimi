@@ -1,13 +1,18 @@
-﻿namespace Lecture_1.Part_2.CarRentalPro;
-using
+﻿using CarRentalPro;
 
+namespace Lecture_1.Part_2.CarRentalPro;
 public class Program
 {
 
     static void Main(string[] args)
     {
+
+        
+        RentalService rentalService = new RentalService();
+
         Console.WriteLine("Welcome to the Car Rental System");
         bool exit = false;
+
 
         while (!exit)
         {
@@ -22,13 +27,13 @@ public class Program
             switch (choice)
             {
                 case "1":
-                    RentCar();
+                    rentalService.RentCar();
                     break;
                 case "2":
-                    ReturnCar();
+                    rentalService.ReturnCar();
                     break;
                 case "3":
-                    ListAvailableCars();
+                    rentalService.ListAvailableCars();
                     break;
                 case "4":
                     exit = true;
