@@ -27,7 +27,7 @@ class MyEntity
     #endregion
     public MyEntity()
     {
-        Id = Guid.NewGuid();
+        Id = Guid.NewGuid().ToString();
         Console.WriteLine(Id);
     
     }
