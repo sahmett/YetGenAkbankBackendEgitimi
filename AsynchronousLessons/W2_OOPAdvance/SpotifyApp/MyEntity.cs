@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-new MyEntity();
-
 class MyEntity
 {
-    public string Id { get; set; }
+    public Guid Id { get; set; }
 
     #region RAND ID
     /* 
@@ -27,7 +25,7 @@ class MyEntity
     #endregion
     public MyEntity()
     {
-        Id = Guid.NewGuid().ToString();
+        Id = Guid.NewGuid();
         Console.WriteLine(Id);
     
     }
