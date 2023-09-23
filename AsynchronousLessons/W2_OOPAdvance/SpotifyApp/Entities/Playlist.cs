@@ -11,30 +11,32 @@ namespace SpotifyApp.Entities
         public Guid Id { get; set; }
         public string Name { get; private set; }
 
-        private List<string> Songs { get; set; }
+        private List<Song> Songs { get; set; }
 
         public Playlist()
         {
-            Songs = new List<string>();
+            Songs = new List<Song>();
         }
-        public Playlist(string name) : this()
+        public Playlist(Song firstsong) : this()
         { 
-            AddSong(name);
+            AddSong(firstsong);
         }
 
-        public void AddSong(string name)
+        public void AddSong(Song song)
         {
-            if(IsSongTitleValid(name))
-                Songs.Add(name);
+            if(song!=null)
+                Songs.Add(song);
         }
 
-        private bool IsSongTitleValid(string name)
+        /*private bool IsSongTitleValid(string name)
         {
             return
                 !string.IsNullOrEmpty(name)
                 && name.Length > 2
                 && name.Length < 10;
         }
+        
+
         public void PrintList()
         {
             foreach(var song in Songs)
@@ -42,5 +44,6 @@ namespace SpotifyApp.Entities
                 Console.WriteLine(song);
             }
         }
+        */
     }
 }
