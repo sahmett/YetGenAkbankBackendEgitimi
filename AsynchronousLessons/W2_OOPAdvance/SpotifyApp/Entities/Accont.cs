@@ -20,12 +20,14 @@ namespace SpotifyApp.Entities
             get { return balance; }
             set
             {
+                if (value >= 100) { 
                 if (Math.Abs(value - Balance) <= 500)
                 {                      
                     balance = (value);
                     Console.WriteLine($"1 Profit - Payment taken, New Balance: {Balance}");
                 }
                 else { Console.WriteLine("1 Profit - Not enough balance, sorry :'( "); }
+            }
             }
         }
 
