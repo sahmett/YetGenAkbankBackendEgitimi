@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpotifyApp.Entities;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,8 +8,23 @@ using System.Threading.Tasks;
 
 namespace SpotifyApp.Service
 {
-    internal class NotepadWriter
+    public class NotepadWriter
     {
+        public void PlaylistWriter(Playlist playlist)
+        {
+            string directory = $@"{Directory.GetParent(Directory.GetCurrentDirectory())
+                .Parent?.Parent?.FullName}\Service";
+            
+            if(!File.Exists(directory))
+                Directory.CreateDirectory(directory);
+
+            string saveFile = Path.Combine(directory, $"{playlist.Name}.txt");
+
+            File.WriteAllText(saveFile, playlist.GetSongs());
+
+            Console.WriteLine("data successfully saved to notepad");
+        }
+
         public void writeNotepad(string _path, string _body)
         {
             try

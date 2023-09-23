@@ -1,5 +1,6 @@
 ﻿
 using SpotifyApp.Entities;
+using SpotifyApp.Service;
 
 #region OOP Part
 /*
@@ -37,4 +38,8 @@ Console.WriteLine(leleCano.GetSongs());
 
 Console.WriteLine("\n \n write");
 
-leleCano.PrintListNotepadWriter("C:\\Users\\seyyi\\Desktop\\Test.txt");
+//leleCano.PrintListNotepadWriter("C:\\Users\\seyyi\\Desktop\\Test.txt");
+
+NotepadWriter notepadWriter = new NotepadWriter();
+
+notepadWriter.PlaylistWriter(leleCano);
