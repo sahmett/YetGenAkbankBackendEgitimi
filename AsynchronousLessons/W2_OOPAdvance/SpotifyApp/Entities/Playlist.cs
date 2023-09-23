@@ -10,7 +10,7 @@ namespace SpotifyApp.Entities
     public class Playlist
     {
         public Guid Id { get; set; }
-        public string Name { get; private set; }
+        public string Name { get; set; }
 
         private List<Song> Songs { get; set; }
 
@@ -31,7 +31,7 @@ namespace SpotifyApp.Entities
 
         public string GetSongs()
         {
-            return string.Join("\n", Songs.Select(x => x.Title));
+            return string.Join("\n", Songs.Select(x => $"{x.Title} - {x.Artist} - {x.Producer} - {x.Composer}"));
         }
 
         /*private bool IsSongTitleValid(string name)

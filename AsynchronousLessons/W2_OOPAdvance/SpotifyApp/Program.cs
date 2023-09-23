@@ -23,6 +23,9 @@ Song song5 = new Song("Smells Like Teen Spirit", "Nirvana", "Butch Vig", "Kurt C
 
 Playlist leleCano = new Playlist(song1);
 
+leleCano.Name = "list1";
+
+
 leleCano.AddSong(song2);
 leleCano.AddSong(song3);
 leleCano.AddSong(song4);
