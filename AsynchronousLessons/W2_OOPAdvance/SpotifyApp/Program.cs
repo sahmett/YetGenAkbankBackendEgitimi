@@ -31,7 +31,10 @@ leleCano.AddSong(song5);
 Console.WriteLine(leleCano.GetSongs());
 
 leleCano.ShuffleList();
-Console.WriteLine("shufffffffffle");
+Console.WriteLine("\n \n shufffffffffle");
 
 Console.WriteLine(leleCano.GetSongs());
 
+Console.WriteLine("\n \n write");
+
+leleCano.PrintListNotepadWriter("C:\\Users\\seyyi\\Desktop\\Test.txt");

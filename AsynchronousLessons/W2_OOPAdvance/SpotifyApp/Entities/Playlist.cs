@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpotifyApp.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -62,6 +63,16 @@ namespace SpotifyApp.Entities
                 int randomIndex = random.Next(0, count);
                 Songs[count] = Songs[randomIndex];
                 Songs[randomIndex] = song;
+            }
+        }
+
+        public void PrintListNotepadWriter(string path)
+        {
+            foreach (var song in Songs)
+            {
+                Console.WriteLine(song);
+                var np = new NotepadWriter();
+                np.writeNotepad2(path, song.Title);
             }
         }
     }
