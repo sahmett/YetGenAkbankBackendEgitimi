@@ -28,6 +28,11 @@ namespace SpotifyApp.Entities
                 Songs.Add(song);
         }
 
+        public string GetSongs()
+        {
+            return string.Join("\n", Songs.Select(x => x.Title));
+        }
+
         /*private bool IsSongTitleValid(string name)
         {
             return

@@ -26,5 +26,6 @@ namespace SpotifyApp.Entities
             Producer = producer;
             Composer = composer;
         }
+
     }
 }
