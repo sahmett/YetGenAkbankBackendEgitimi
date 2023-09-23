@@ -12,15 +12,26 @@ a1.Balance -= 600;
 */
 #endregion
 
-var song1 = new Song("Huma Kuşu", "Artist 1", "Producer 1", "Composer 1");
-var song2 = new Song("Song Title 2", "Artist 2", "Producer 2", "Composer 2");
-var song3 = new Song("Song Title 3", "Artist 3", "Producer 3", "Composer 3");
+Song song1 = new Song("Bohemian Rhapsody", "Queen", "Roy Thomas Baker", "Freddie Mercury");
+Song song2 = new Song("Imagine", "John Lennon", "John Lennon, Yoko Ono, Phil Spector", "John Lennon");
+Song song3 = new Song("Hotel California", "Eagles", "Bill Szymczyk", "Don Felder, Don Henley, Glenn Frey");
+Song song4 = new Song("Like a Rolling Stone", "Bob Dylan", "Tom Wilson", "Bob Dylan");
+Song song5 = new Song("Smells Like Teen Spirit", "Nirvana", "Butch Vig", "Kurt Cobain");
+
 
 
 Playlist leleCano = new Playlist(song1);
 
 leleCano.AddSong(song2);
+leleCano.AddSong(song3);
+leleCano.AddSong(song4);
+leleCano.AddSong(song5);
 
+
+Console.WriteLine(leleCano.GetSongs());
+
+leleCano.ShuffleList();
+Console.WriteLine("shufffffffffle");
 
 Console.WriteLine(leleCano.GetSongs());
 

@@ -13,13 +13,13 @@ namespace SpotifyApp.Entities
 
         private List<Song> Songs { get; set; }
 
-        public Playlist()
+        private Random random;
+
+        public Playlist(Song firstsong) 
         {
             Songs = new List<Song>();
-        }
-        public Playlist(Song firstsong) : this()
-        { 
             AddSong(firstsong);
+            random = new Random();
         }
 
         public void AddSong(Song song)
@@ -50,5 +50,19 @@ namespace SpotifyApp.Entities
             }
         }
         */
+
+        public void ShuffleList()
+        {
+            int count = Songs.Count;
+            while(count > 0)
+            {
+                count--;
+
+                Song song = Songs[count];
+                int randomIndex = random.Next(0, count);
+                Songs[count] = Songs[randomIndex];
+                Songs[randomIndex] = song;
+            }
+        }
     }
 }
