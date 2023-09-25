@@ -8,7 +8,8 @@ using CalenderApp.Common;
 
 namespace CalenderApp.Entities
 {
-    internal class Todo : Event { 
+    internal class Todo : Event, INotification
+    { 
        
         public string Importance {get; set;}
         public void GetNotification()

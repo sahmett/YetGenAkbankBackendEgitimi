@@ -8,6 +8,6 @@ namespace CalenderApp.Abstract
 {
     internal interface INotification
     {
-        void GetNotification ();
+        void GetNotification  ();
     }
 }

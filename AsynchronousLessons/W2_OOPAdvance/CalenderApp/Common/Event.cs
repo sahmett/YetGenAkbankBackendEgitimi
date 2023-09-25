@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalenderApp.Common
 {
-    public class Event
+    public class Event,INotification 
     {
 
         public Guid Id { get; set; }

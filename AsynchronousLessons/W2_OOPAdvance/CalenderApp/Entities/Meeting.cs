@@ -8,7 +8,7 @@ using CalenderApp.Common;
 
 namespace CalenderApp.Entities
 {
-    public class Meeting : Event
+    public class Meeting : Event ,INotification
     {
         
         public List<string> Guests { get; set; }
