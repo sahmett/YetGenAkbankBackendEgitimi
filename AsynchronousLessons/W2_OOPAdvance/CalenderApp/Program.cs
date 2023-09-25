@@ -4,7 +4,7 @@ using CalenderApp.Entities;
 
 Console.WriteLine("calender app");
 
-var meeting1 = new Meeting()
+var meeting1 = new Meeting
 {
     Title = "Test Meeting",
     Details = new List<string>() { "Katilimci list düzenle", "Bakım yap" },
@@ -13,7 +13,7 @@ var meeting1 = new Meeting()
     Guests = new List<string>() { "ali@gmail.com", "veli@gmail.com"}
 };
 
-var todo1 = new Todo()
+var todo1 = new Todo
 {
     Title = "Test Meeting",
     Details = new List<string>() { "Katilimci list düzenle", "Bakım yap" },
@@ -21,3 +21,5 @@ var todo1 = new Todo()
     EndTime = new DateTime(2023, 09, 18, 22, 00, 00),
     Importance = "mühim"
 };
+
+Console.WriteLine();

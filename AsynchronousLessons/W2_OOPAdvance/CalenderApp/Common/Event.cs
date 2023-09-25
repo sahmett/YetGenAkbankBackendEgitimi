@@ -15,18 +15,18 @@ namespace CalenderApp.Common
         public string Type { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public Event(string title, List<string> details, string type, DateTime startTime, DateTime endTime)
+        public Event(string title, List<string> details, string type, DateTime startTime, DateTime endTime) : this()
         {
-            Id = Guid.NewGuid();
+         
             Title = title;
             Details = details;
             Type = type;
             StartTime = startTime;
             EndTime = endTime;
         }
-        public Event()
+        public Event() 
         {
-
+            Id = Guid.NewGuid();
         }
 
     }
