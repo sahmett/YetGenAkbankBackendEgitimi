@@ -15,7 +15,7 @@ namespace CalenderApp.Common
         public string Type { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public Event(Guid ıd, string title, List<string> details, string type, DateTime startTime, DateTime endTime)
+        public Event(string title, List<string> details, string type, DateTime startTime, DateTime endTime)
         {
             Id = Guid.NewGuid();
             Title = title;
@@ -23,6 +23,10 @@ namespace CalenderApp.Common
             Type = type;
             StartTime = startTime;
             EndTime = endTime;
+        }
+        public Event()
+        {
+
         }
 
     }

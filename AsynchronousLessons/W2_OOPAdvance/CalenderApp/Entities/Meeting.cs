@@ -8,8 +8,9 @@ using CalenderApp.Common;
 
 namespace CalenderApp.Entities
 {
-    public class Meeting : Event { 
-    
+    public class Meeting : Event
+    {
+        
         public List<string> Guests { get; set; }
 
         public void GetNotification()
