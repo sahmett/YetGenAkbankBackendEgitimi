@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("interfaces");
+Console.WriteLine("interfaces implement");
 SamsungPrinter samsungPrinter = new SamsungPrinter();
 samsungPrinter.PrintPage();
 
