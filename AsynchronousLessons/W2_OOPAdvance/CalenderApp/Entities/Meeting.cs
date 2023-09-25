@@ -17,7 +17,7 @@ namespace CalenderApp.Entities
         {
             foreach (var item in Guests)
             {
-                Console.WriteLine(item);
+                Console.WriteLine($" Notification send -> {item}");
             }
         }
     }

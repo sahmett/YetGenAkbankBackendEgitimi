@@ -22,4 +22,8 @@ var todo1 = new Todo
     Importance = "mühim"
 };
 
+meeting1.GetNotification();
+todo1.GetNotification();
+
+
 Console.WriteLine();

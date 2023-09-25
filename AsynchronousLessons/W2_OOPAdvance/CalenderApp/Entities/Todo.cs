@@ -14,7 +14,7 @@ namespace CalenderApp.Entities
         public string Importance {get; set;}
         public void GetNotification()
         {
-            Console.WriteLine($"{Importance} notification taken");
+            Console.WriteLine($"{Importance} notification send");
         }
 
     }

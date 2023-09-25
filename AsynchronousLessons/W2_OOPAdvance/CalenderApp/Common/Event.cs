@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalenderApp.Common
 {
-    public class Event,INotification 
+    public class Event 
     {
 
         public Guid Id { get; set; }
@@ -17,7 +17,6 @@ namespace CalenderApp.Common
         public DateTime EndTime { get; set; }
         public Event(string title, List<string> details, string type, DateTime startTime, DateTime endTime) : this()
         {
-         
             Title = title;
             Details = details;
             Type = type;
