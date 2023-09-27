@@ -8,5 +8,10 @@ namespace FreelencerApp.Services
 {
     internal class NotepadService
     {
+
+        public void SaveToNotepad(string path, string data)
+        {
+            File.WriteAllText($"{path}\\Deneeme.txt", data);
+        }
     }
 }
