@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace FreelencerApp.Entities
 {
-    internal class Customer : Person
+    internal class Customer : Person<Guid>
     {
-
+        public string PhoneNumber { get; set; }
 
     }
 }

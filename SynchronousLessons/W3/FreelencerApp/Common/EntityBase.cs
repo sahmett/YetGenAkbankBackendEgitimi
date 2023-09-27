@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FreelencerApp.Entities
+namespace FreelencerApp.Common
 {
-    internal class Person
+    internal class EntityBase<TKEY>
     {
+        public Guid Id { get; set; }
+        public DateTimeOffset CreatedOn { get; set; }
     }
 }
