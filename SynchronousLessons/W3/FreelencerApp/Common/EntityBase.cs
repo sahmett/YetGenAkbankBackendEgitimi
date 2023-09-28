@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FreelencerApp.Common
 {
-    internal class EntityBase<TKEY>
+    internal class EntityBase<TKey>
     {
-        public Guid Id { get; set; }
+        public TKey Id { get; set; }
         public DateTimeOffset CreatedOn { get; set; }
     }
 }

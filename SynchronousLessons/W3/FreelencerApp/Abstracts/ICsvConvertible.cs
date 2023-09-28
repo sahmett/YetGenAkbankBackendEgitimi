@@ -8,5 +8,7 @@ namespace FreelencerApp.Abstracts
 {
     internal interface ICsvConvertible
     {
+        string GetValueCSV();
+        void SetValueCSV(string csv);
     }
 }

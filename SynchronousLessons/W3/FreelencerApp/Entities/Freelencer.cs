@@ -13,6 +13,11 @@ namespace FreelencerApp.Entities
         public List<Review> Reviews { get; set;}
 
         //todo Skills
+
+        public string GetValueCSV()
+        {
+
+        }
         
 
     }
