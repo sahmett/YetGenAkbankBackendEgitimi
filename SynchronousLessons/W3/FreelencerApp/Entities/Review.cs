@@ -10,7 +10,7 @@ namespace FreelencerApp.Entities
     internal class Review : EntityBase<Guid>
     {
         public string Text { get; set; }
-        public int Point { get; set; }
+        public int Rating { get; set; }
 
     }
 }
