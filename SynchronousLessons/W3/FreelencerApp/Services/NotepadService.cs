@@ -27,15 +27,15 @@ namespace FreelencerApp.Services
             File.AppendAllText(filePath, $"{data.GetValueCSV()}\n");
         }
 
-        public string GetNotepad(string path) 
+        public string GetOnNotepad(string path) 
         {
             if(File.Exists(path))
             {
                 return File.ReadAllText(path);
                 
             }
-            
-            throw new Exception("file doesn't exist")
+
+            throw new Exception("file doesn't exist");
             
         }
     }
