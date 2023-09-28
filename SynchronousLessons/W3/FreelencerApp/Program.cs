@@ -1,5 +1,10 @@
 ﻿using FreelencerApp.Entities;
 using FreelencerApp.Services;
+using FreelencerApp.Common;
+using FreelencerApp.Abstracts;
+
+
+
 
 var anotherCustomerInstance = new Customer
 {
@@ -13,7 +18,7 @@ var anotherCustomerInstance = new Customer
 
 
 NotepadService notepadService = new();
-//notepadService.SaveToNotepad(anotherCustomerInstance);
+notepadService.SaveToNotepad(anotherCustomerInstance);
 
 string customerData = notepadService.GetOnNotepad("C:\\Users\\ahmet\\OneDrive\\Documents\\GitHub\\Backend_Lecture_Materials\\Lecture_3\\Freelancer\\Database\\Customers.txt");
 
@@ -24,6 +29,6 @@ List<Customer> customers = new();
 foreach (var line in splittedLines)
 {
     Customer customer = new();
-    customer.SetValuesCSV(line);
+    customer.SetValueCSV(line);
     customers.Add(customer);
 }
