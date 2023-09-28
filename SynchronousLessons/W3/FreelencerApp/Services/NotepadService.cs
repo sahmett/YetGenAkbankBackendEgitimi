@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FreelencerApp.Common;
+using FreelencerApp.Constants;
+using FreelencerApp.Entities;
 
 namespace FreelencerApp.Services
 {
