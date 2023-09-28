@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FreelencerApp.Abstracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,31 @@ namespace FreelencerApp.Services
 {
     internal class NotepadService
     {
-
-        public void SaveToNotepad(string path, string data)
+        public void SaveToNotepad(ICsvConvertible data) 
         {
-            File.WriteAllText($"{path}\\Deneeme.txt", data);
+            string path = $"{FileLocations.ProjectFolder}\\Database";
+            string type = data.GetType().ToString().Split(',').LastOrDefault() ;
+
+            if(!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
+            string filePath = $"{path}\\{type}s.txt";
+
+            File.AppendAllText(filePath, $"{data.GetValueCSV()}\n");
+        }
+
+        public string GetNotepad(string path) 
+        {
+            if(File.Exists(path))
+            {
+                return File.ReadAllText(path);
+                
+            }
+            
+            throw new Exception("file doesn't exist")
+            
         }
     }
 }
