@@ -3,10 +3,20 @@ using OOP_TextProject.Entities;
 using OOP_TextProject.Enums;
 using System.Text.Json;
 
-var filePath = "C:\\Users\\yelkenliler\\Downloads\\AccessControlLogs.txt";
+string filePath = "C:\\Users\\yelkenliler\\Downloads\\AccessControlLogs.txt";
 var textFile = File.ReadAllText(filePath);
 
+try { 
+
+
+
+Console.WriteLine("text file imported..");
+
 var splitedLines = textFile.Split("\n", StringSplitOptions.RemoveEmptyEntries);
+
+
+Console.WriteLine("lines are splitted..");
+
 
 List<AccessControlLog> logs = new();
 
@@ -29,6 +39,13 @@ foreach(var splitedLine in splitedLines)
     logs.Add(accessControlLog);
 }
 
+Console.WriteLine("all lines are converted to obj..");
+        
 Console.WriteLine(JsonSerializer.Serialize(logs));
-//File.WriteAllText("C:\\Users\\yelkenliler\\Downloads\\Logs.txt",JsonSerializer.Serialize(logs));
-Console.WriteLine("op. ok");
+File.WriteAllText("C:\\Users\\yelkenliler\\Downloads\\Logs.txt",JsonSerializer.Serialize(logs));
+Console.WriteLine("the json file was successfully created. ok");
+
+}catch (Exception ex)
+{
+    Console.WriteLine(ex.ToString());
+}
