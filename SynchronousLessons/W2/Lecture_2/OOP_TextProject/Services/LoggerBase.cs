@@ -10,7 +10,7 @@ namespace OOP_TextProject.Services
     {
         protected internal abstract void Log(string message);
         protected internal abstract void LogSucces(string message);
-        protected internal abstract void LogInformation(string message);
+        protected internal abstract void LogInfo(string message);
         protected internal abstract void LogError(string message);
         protected internal abstract void LogWarning(string message);
 
