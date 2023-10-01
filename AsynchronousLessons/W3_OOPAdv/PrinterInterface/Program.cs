@@ -10,7 +10,7 @@ hPPrinter.PrintPage();
 interface IPrinter
 {
     void PrintPage();
-
+            
 }
 
 class SamsungPrinter : IPrinter
