@@ -28,5 +28,10 @@ namespace ProductTransportApp.Services
 
             return taxRate;
         }
+
+        public decimal CalculateTax(Product product, CountryInformation countryInfo)
+        {
+            return product.Price * countryInfo.TaxRate;
+        }
     }
 }
