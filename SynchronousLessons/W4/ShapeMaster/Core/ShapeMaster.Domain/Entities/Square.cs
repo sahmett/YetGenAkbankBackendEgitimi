@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 
 namespace ShapeMaster.Domain.Entities
 {
-    internal class Rectangle : Shape
+    internal class Square : Shape
     {
         public decimal ASide { get; set; }
-        public decimal BSide { get; set; }
 
 
         public override decimal GetArea()
         {
-            return ASide * BSide;
+            return ASide * ASide;
         }
     }
 }

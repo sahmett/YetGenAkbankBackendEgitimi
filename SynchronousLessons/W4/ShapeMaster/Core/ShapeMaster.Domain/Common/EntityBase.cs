@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ShapeMaster.Domain.Common
 {
-    internal class EntityBase
+    internal class EntityBase<Tkey>
     {
+        public Tkey Id { get; set; }
+
+        public DateTimeOffset CreatedOn { get; set; }
     }
 }

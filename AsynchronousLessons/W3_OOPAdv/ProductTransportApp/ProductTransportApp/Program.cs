@@ -10,4 +10,24 @@ ShippingService sp = new ShippingService();
 
 Console.WriteLine(sp.CalculateTax(product4, "Turkey"));
 
-NotepadServices notes = new NotepadServices();
+string path = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Database\\FileTaxRates.txt";
+
+NotepadServices notepadServices = new();
+
+string[] lines = notepadServices.ReadFromNotepad(path).Split("\r\n");
+
+List<CountryInformation> countryInformations = new();
+
+foreach (var line in lines)
+{
+    CountryInformation countryInformation = new CountryInformation(line);
+    countryInformations.Add(countryInformation);
+}
+
+   foreach (var country in countryInformations)
+{
+   Console.WriteLine( sp.CalculateTax(product4,country));
+}
+
+
+Console.WriteLine("finished");

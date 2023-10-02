@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ShapeMaster.Domain.Common
 {
-    internal class Shape
+    internal abstract class Shape
     {
+        public abstract decimal GetArea();
     }
 }
