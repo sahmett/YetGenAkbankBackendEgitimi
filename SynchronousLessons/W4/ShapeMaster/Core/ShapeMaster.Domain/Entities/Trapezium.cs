@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ShapeMaster.Domain.Entities
 {
-    internal class Triangel : Shape
+    internal class Trapezium: Shape
     {
         public decimal Base { get; set; }
         public decimal Height { get; set; }
