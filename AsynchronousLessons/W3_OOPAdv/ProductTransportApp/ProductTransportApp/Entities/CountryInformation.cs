@@ -19,11 +19,13 @@ namespace ProductTransportApp.Entities
             Name = name;
             TaxRate = taxRate;
         }
-        public CountryInformation(string[] lineData)
+        public CountryInformation(string lineData)
         {
             Id = new Guid();
-            Name = lineData[0];
-            TaxRate = Convert.ToDecimal(lineData[1]);
+
+            string[] data = lineData.Split(',');
+            Name = data[0];
+            TaxRate = Convert.ToDecimal(data[1]);
         }
 
     }
