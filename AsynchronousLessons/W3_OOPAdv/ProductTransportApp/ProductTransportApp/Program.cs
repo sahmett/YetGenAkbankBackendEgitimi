@@ -9,3 +9,5 @@ Product product4 = new Product("Product 4", 0.3m, 5.49m);
 ShippingService sp = new ShippingService();
 
 Console.WriteLine(sp.CalculateTax(product4, "Turkey"));
+
+NotepadServices notes = new NotepadServices();

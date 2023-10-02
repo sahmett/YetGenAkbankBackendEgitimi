@@ -8,7 +8,8 @@ namespace ProductTransportApp.Services
 {
     internal class NotepadServices
     {
-        public string ReadFromNotepad(string _path)
+        //koddan baktım
+        public string ReadFromNotepad(string _path) 
         {
             if (File.Exists(_path ))
                 return File.ReadAllText(_path);
