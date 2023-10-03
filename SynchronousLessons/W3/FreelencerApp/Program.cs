@@ -32,3 +32,5 @@ foreach (var line in splittedLines)
     customer.SetValueCSV(line);
     customers.Add(customer);
 }
+
+Console.WriteLine("");
