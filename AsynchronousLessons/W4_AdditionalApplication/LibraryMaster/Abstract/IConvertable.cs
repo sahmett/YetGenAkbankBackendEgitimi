@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryMaster.Common
+namespace LibraryMaster.Abstract
 {
-    internal class Person
+    internal interface IConvertable
     {
+        string GetValues();
+        string SetValues();
     }
 }

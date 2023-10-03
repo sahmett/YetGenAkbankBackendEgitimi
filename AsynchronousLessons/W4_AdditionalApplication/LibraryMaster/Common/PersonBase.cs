@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace LibraryMaster.Common
 {
-    internal abstract class EntityBase<Tkey>
+    internal abstract class PersonBase: EntityBase<Guid>
     {
-        public Tkey Id { get; set; }
-        public DateTimeOffset CretedOn { get; set; }
+        public string Name { get; set; }
+        
     }
 }
+
