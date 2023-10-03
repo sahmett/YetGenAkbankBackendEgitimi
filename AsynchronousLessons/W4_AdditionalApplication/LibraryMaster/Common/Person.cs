@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryMaster.Common
 {
-    internal class EntityBase<Tkey>
+    internal class Person
     {
-        public Tkey Id { get; set; }
-        public DateTimeOffset CretedOn { get; set; }
     }
 }
