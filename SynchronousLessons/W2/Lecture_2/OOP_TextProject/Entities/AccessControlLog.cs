@@ -11,8 +11,6 @@ namespace OOP_TextProject.Entities
 {
     public class AccessControlLog : EntitiyBase<Guid>
     {
-
-        
         public long PersonId { get; set; }
         public string DeviceSerialNo { get; set; }
         public AccessType AccesType { get; set; }

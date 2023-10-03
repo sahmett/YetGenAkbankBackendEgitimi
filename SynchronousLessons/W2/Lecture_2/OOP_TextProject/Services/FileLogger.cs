@@ -14,8 +14,8 @@ namespace YetGenAkbankJumpOOPConsole.Services
     public class FileLogger : LoggerBase
     {
 
-        private readonly string _filePath;
-        protected internal override string Name { get; set; } = "YetGen";
+        private readonly string _filePath; //readonly
+        protected internal override string Name { get; set; } = "YetGen"; //varsayılan atama mantıgı
         public FileLogger(string filePath)
         {
             _filePath = filePath;
@@ -48,7 +48,8 @@ namespace YetGenAkbankJumpOOPConsole.Services
         protected internal override void LogFatal(string message)
         {
             File.AppendAllText(_filePath, $"Fatal => {message}");
-            base.LogFatal(message);
+
+            base.LogFatal(message); //base uzerinden çagırma
         }
 
     }

@@ -14,7 +14,7 @@ namespace YetGenAkbankJumpOOPConsole.Services
         protected internal abstract void LogError(string message);
         protected internal abstract void LogInfo(string message);
         protected internal abstract void LogWarning(string message);
-        protected internal virtual void LogFatal(string message)
+        protected internal virtual void LogFatal(string message) //virtual dikkat
         {
             Console.WriteLine($"Fatal => {message} - {DateTime.Now:g}");
         }
