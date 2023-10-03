@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace OOP_TextProject.Common
 {
-    public class EntitiyBase 
+    public class EntitiyBase<Tkey>
     {
-        public Guid id {  get; set; }
+        public Tkey id {  get; set; }
         public DateTimeOffset CreatedOn { get; set; }
     }
 }
