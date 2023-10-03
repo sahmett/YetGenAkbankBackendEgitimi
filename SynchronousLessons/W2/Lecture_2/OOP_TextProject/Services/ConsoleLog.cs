@@ -1,4 +1,6 @@
-﻿using OOP_TextProject.Services;
+﻿
+using OOP_TextProject.Common;
+using OOPConsoleApp.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,11 +31,6 @@ namespace YetGenAkbankJumpOOPConsole.Services
         protected internal override void LogWarning(string message)
         {
             Console.WriteLine($"Uyarı => {message} - {DateTime.Now:g}");
-        }
-
-        protected internal override void LogSucces(string message)
-        {
-            throw new NotImplementedException();
         }
 
     }

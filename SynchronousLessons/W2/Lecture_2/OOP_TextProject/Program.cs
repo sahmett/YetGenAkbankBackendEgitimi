@@ -26,7 +26,7 @@ foreach(var splitedLine in splitedLines)
 
     var accessControlLog = new AccessControlLog()
     {
-        Id = Guid.NewGuid(),
+       
         CreatedOn = DateTimeOffset.Now,
         PersonId = Convert.ToInt64(lineValue[0]),
         DeviceSerialNo = lineValue[1],
