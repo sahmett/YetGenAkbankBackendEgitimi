@@ -1,4 +1,5 @@
 ﻿using OOP_TextProject.Enums;
+using OOP_TextProject.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OOP_TextProject.Entities
 {
-    public class AccessControlLog
+    public class AccessControlLog : EntitiyBase<Guid>
     {
 
         
