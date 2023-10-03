@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace OOP_TextProject.Common
 {
-    public class PersonBase
+    public class PersonBase // Base burada temel anlamına gelir
     {
         public Guid Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        //public Gender Gender { get; set; }
+        public Gender Gender { get; set; }
         public DateTimeOffset CreatedOn { get; set; }
 
         public void SayMyName()

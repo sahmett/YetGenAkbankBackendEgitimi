@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP_TextProject.Entities
+namespace OOPConsoleApp.Enums
 {
-    public class Person : EntityBase<int>
+    public enum Gender
     {
+        Female = 0,
+        Male = 1,
+        Unknown = 2
     }
 }

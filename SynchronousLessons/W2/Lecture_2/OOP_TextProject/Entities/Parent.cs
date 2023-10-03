@@ -1,12 +1,14 @@
-﻿using System;
+﻿using OOPConsoleApp.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP_TextProject.Entities
+namespace OOPConsoleApp.Entities
 {
-    public class Person : EntityBase<int>
+    public class Parent : PersonBase
     {
+
     }
 }

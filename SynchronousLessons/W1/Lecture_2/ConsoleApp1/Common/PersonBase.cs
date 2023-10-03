@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOPConsoleApp.Common
 {
-    public class PersonBase
+    public class PersonBase // Base burada temel anlamına gelir
     {
         public Guid Id { get; set; }
         public string FirstName { get; set; }

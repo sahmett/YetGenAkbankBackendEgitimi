@@ -11,11 +11,10 @@ namespace OOP_TextProject.Entities
     public class AccessControlLog
     {
 
-        public Guid Id { get; set; }
+        
         public long PersonId { get; set; }
         public string DeviceSerialNo { get; set; }
         public AccessType AccesType { get; set; }
-        public DateTimeOffset CreatedOn { get; set; }
         public DateTime LogTime { get; set; }
 
         public static  AccessType ConvertStringToAccesType(string accesType)
@@ -29,8 +28,11 @@ namespace OOP_TextProject.Entities
                 case "CARD":
                     return AccessType.Card;
                 default:
-                    throw new Exception("acces type");
+                    throw new Exception("acces type error");
             }
+           /*
+            * return ediyorsak kod aşağı doğru devam etmez. Bu yüzden break kullanmaya gerek yok. 
+            */
         }
     }
 }
