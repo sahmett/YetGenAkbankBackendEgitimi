@@ -1,4 +1,5 @@
 ﻿using OOP_TextProject.Enums;
+using OOP_TextProject.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,8 @@ using System.Threading.Tasks;
 
 namespace OOP_TextProject.Entities
 {
-    public class AccessControlLog
+    public class AccessControlLog : EntitiyBase<Guid>
     {
-
-        
         public long PersonId { get; set; }
         public string DeviceSerialNo { get; set; }
         public AccessType AccesType { get; set; }
