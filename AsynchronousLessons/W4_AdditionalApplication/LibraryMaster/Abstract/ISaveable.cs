@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryMaster.Abstract
 {
-    internal interface IConvertable
+    internal interface ISaveable
     {
         string GetValues();
         string SetValues();

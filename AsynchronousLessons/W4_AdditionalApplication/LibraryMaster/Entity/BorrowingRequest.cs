@@ -9,7 +9,7 @@ namespace LibraryMaster.Entity
 {
     internal class BorrowingRequest : EntityBase<Guid>
     {
-        public string BorrowedBy { get; set; }
+        public User BorrowingBy { get; set; }
         public DateTime BorrowStartDate { get; set; }
         public DateTime BorrowEndDate { get; set; }
 
