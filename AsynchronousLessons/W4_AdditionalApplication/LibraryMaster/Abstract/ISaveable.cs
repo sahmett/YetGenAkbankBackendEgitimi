@@ -9,6 +9,6 @@ namespace LibraryMaster.Abstract
     internal interface ISaveable
     {
         string GetValues();
-        string SetValues();
+        void SetValues();
     }
 }

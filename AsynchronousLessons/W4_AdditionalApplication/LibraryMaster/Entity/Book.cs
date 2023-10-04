@@ -18,7 +18,7 @@ namespace LibraryMaster.Entity
             throw new NotImplementedException();
         }
 
-        public string SetValues()
+        public void SetValues()
         {
             throw new NotImplementedException();
         }
