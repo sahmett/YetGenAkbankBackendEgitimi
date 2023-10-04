@@ -82,6 +82,7 @@ Console.ReadLine();
 
 string[] lines = bookData.Split('\n', StringSplitOptions.RemoveEmptyEntries);
 List<Book> bookList = new List<Book>();
+
 foreach (string line in lines)
 {
     Book book = new Book(); // Her satır için yeni bir Book nesnesi oluşturun
