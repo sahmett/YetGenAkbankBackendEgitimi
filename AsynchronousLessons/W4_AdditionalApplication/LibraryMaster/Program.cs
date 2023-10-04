@@ -97,3 +97,40 @@ foreach (Book book in bookList)
     Console.WriteLine(); // Boş satır eklemek için
 }
 Console.ReadLine();
+
+
+/*
+ * PROMPT:string[] lines = bookData.Split('\n', StringSplitOptions.RemoveEmptyEntries);
+ * kodun nasıl çalıştığını örnekle anlat basitçe.
+
+Tabii ki! İşte `string[] lines = bookData.Split('\n', StringSplitOptions.RemoveEmptyEntries);` kodunun nasıl çalıştığını
+basitbir örnek ile anlatayım.
+
+Örneğin, aşağıdaki `bookData` değişkeni içinde kitap bilgilerini içeren bir metin olduğunu düşünelim:
+
+```csharp
+string bookData = "Jane Author,Sample Book\nAuthor A,Book 1\nAuthor B,Book 2\n\nAuthor C,Book 3\n";
+```
+
+Bu metin, satır başlarına göre kitap bilgilerini içerir ve bazı satırlarda boş satırlar da vardır. Şimdi bu metni `'\n'` 
+(yeni satır) karakteri ile ayıralım:
+
+```csharp
+string[] lines = bookData.Split('\n', StringSplitOptions.RemoveEmptyEntries);
+```
+
+Bu kod satırı, `bookData` metnini `'\n'` karakterine göre böler ve her yeni satırda bir dize öğesi oluşturur. `
+StringSplitOptions.RemoveEmptyEntries` seçeneği kullanıldığı için boş satırlar (`\n\n`) metinden çıkarılır.
+
+Örnek olarak, `lines` dizisi şu şekilde doldurulur:
+
+```csharp
+lines[0] = "Jane Author,Sample Book"
+lines[1] = "Author A,Book 1"
+lines[2] = "Author B,Book 2"
+lines[3] = "Author C,Book 3"
+```
+
+Görüldüğü gibi, bu kod, her bir satırı ayrı bir dize öğesi olarak `lines` dizisine yerleştirir ve boş satırları
+(`\n\n`) dikkate almaz. Bu, metinden veri çıkartırken ve verileri işlerken kullanışlı bir tekniktir.
+ */
