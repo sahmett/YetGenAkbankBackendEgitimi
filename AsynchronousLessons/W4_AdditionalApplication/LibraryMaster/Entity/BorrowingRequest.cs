@@ -10,7 +10,7 @@ namespace LibraryMaster.Entity
 {
     internal class BorrowingRequest : EntityBase<Guid>, ISaveable
     {
-        public User BorrowingBy { get; set; }
+        public string BorrowingBy { get; set; }
         public DateTime BorrowStartDate { get; set; }
         public DateTime BorrowEndDate { get; set; }
 
@@ -19,7 +19,7 @@ namespace LibraryMaster.Entity
         // Örnek bir metin formatı kullanabilirsiniz.
         public string GetValues()
         {
-            string data = $"{BorrowingBy.Name},{BorrowStartDate},{BorrowEndDate}";
+            string data = $"{BorrowingBy},{BorrowStartDate},{BorrowEndDate}";
             return data;
 
         }
@@ -30,7 +30,7 @@ namespace LibraryMaster.Entity
             if (values.Length == 4) ;
             {
                 Id = Guid.Parse(values[0]);
-                BorrowingBy = values[1];
+                BorrowingBy = values[1].ToString();
                 BorrowStartDate = DateTime.Parse(values[2]);
                 BorrowEndDate = DateTime.Parse(values[3]);
             }
