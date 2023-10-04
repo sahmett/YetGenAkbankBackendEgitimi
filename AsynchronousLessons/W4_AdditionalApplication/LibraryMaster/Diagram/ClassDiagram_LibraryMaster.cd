@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="LibraryMaster.Common.EntityBase&lt;Tkey&gt;">
-    <Position X="339.25" Y="335" Width="1.5" />
+    <Position X="338.75" Y="335" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\EntityBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LibraryMaster.Common.PersonBase">
-    <Position X="342" Y="335.25" Width="1.5" />
+    <Position X="341.75" Y="335.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\PersonBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LibraryMaster.Entity.Book">
-    <Position X="337" Y="337.25" Width="1.5" />
+    <Position X="337.75" Y="337.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIAAAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Entity\Book.cs</FileName>
@@ -31,7 +31,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LibraryMaster.Entity.User">
-    <Position X="342" Y="337.25" Width="1.5" />
+    <Position X="341.75" Y="337.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entity\User.cs</FileName>
@@ -39,28 +39,28 @@
     <Lollipop Position="0.1" />
   </Class>
   <Class Name="LibraryMaster.Constants.FileLocations">
-    <Position X="346.25" Y="336" Width="1.5" />
+    <Position X="343.75" Y="335.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Constants\FileLocations.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LibraryMaster.Enum.Type">
-    <Position X="344.5" Y="339" Width="1.5" />
+    <Position X="343.75" Y="338" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Enum\Type.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LibraryMaster.Service.NotepadService">
-    <Position X="344.5" Y="336" Width="1.5" />
+    <Position X="343.75" Y="336.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
       <FileName>Service\NotepadService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="LibraryMaster.Abstract.ISaveable">
-    <Position X="344.5" Y="337.5" Width="1.5" />
+    <Position X="336.25" Y="335.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Abstract\ISaveable.cs</FileName>
