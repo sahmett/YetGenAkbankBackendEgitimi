@@ -84,15 +84,9 @@ string[] lines = bookData.Split('\n', StringSplitOptions.RemoveEmptyEntries);
 List<Book> bookList = new List<Book>();
 foreach (string line in lines)
 {
-    string[] parts = line.Split(',');
-
-    if (parts.Length == 2)
-    {
-        Book book = new Book();
-        book.Writer = parts[0].Trim();
-        book.Title = parts[1].Trim();
-        bookList.Add(book);
-    }
+    Book book = new Book(); // Her satır için yeni bir Book nesnesi oluşturun
+    book.SetValues(line); // SetValues metodu ile kitap verilerini doldurun
+    bookList.Add(book); // Book nesnesini listeye ekleyin
 }
 
 foreach (Book book in bookList)
