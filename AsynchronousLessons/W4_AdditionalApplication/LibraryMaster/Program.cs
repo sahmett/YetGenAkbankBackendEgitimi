@@ -100,11 +100,10 @@ Console.ReadLine();
 
 
 /*
+ * 
  * PROMPT:string[] lines = bookData.Split('\n', StringSplitOptions.RemoveEmptyEntries);
  * kodun nasıl çalıştığını örnekle anlat basitçe.
-
-Tabii ki! İşte `string[] lines = bookData.Split('\n', StringSplitOptions.RemoveEmptyEntries);` kodunun nasıl çalıştığını
-basitbir örnek ile anlatayım.
+ * 
 
 Örneğin, aşağıdaki `bookData` değişkeni içinde kitap bilgilerini içeren bir metin olduğunu düşünelim:
 
@@ -134,3 +133,5 @@ lines[3] = "Author C,Book 3"
 Görüldüğü gibi, bu kod, her bir satırı ayrı bir dize öğesi olarak `lines` dizisine yerleştirir ve boş satırları
 (`\n\n`) dikkate almaz. Bu, metinden veri çıkartırken ve verileri işlerken kullanışlı bir tekniktir.
  */
+
+//eksikler: ENUM - USER CLASSI AYRINTILAR -
