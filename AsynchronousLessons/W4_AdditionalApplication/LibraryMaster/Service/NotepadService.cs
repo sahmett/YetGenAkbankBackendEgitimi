@@ -10,6 +10,7 @@ namespace LibraryMaster.Service
 {
     internal class NotepadService
     {
+        
         public void SaveToNotepad(ISaveable data)
         {
             string path = $"{FileLocations.ProjectFolder}\\Database";

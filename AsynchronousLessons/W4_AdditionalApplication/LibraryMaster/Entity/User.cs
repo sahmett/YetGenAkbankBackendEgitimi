@@ -14,12 +14,14 @@ namespace LibraryMaster.Entity
 
         public string GetValues()
         {
-            throw new NotImplementedException();
+           
+            return UserDetail;
         }
 
         public void SetValues(string data)
         {
-            throw new NotImplementedException();
+            
+            UserDetail = data;
         }
     }
 }

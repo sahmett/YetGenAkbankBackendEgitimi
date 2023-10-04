@@ -15,12 +15,21 @@ namespace LibraryMaster.Entity
 
         public string GetValues()
         {
-            throw new NotImplementedException();
+            return $"{Writer},{Title}";
         }
 
         public void SetValues(string data)
         {
-            throw new NotImplementedException();
+            string[] values = data.Split(',');
+            if (values.Length == 2)
+            {
+                Writer = values[0];
+                Title = values[1];
+            }
+            else
+            {
+                throw new ArgumentException("Veri dizesi uygun biçimde değil.");
+            }
         }
     }
 }

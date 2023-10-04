@@ -8,5 +8,7 @@ namespace LibraryMaster.Enum
 {
     internal class Type
     {
+
+        // kitap türü 
     }
 }
