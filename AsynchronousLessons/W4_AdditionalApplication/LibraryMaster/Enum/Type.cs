@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace LibraryMaster.Enum
 {
-    internal class Type
+       enum BookType
     {
-
-        // kitap türü 
+        Fiction,     // 0
+        Non-Fiction,    // 1
+        ScienceFiction ,  // 2
+        Romance,   // 3
+        Biography,     // 4
+        Histor,   // 5
     }
 }
