@@ -16,6 +16,7 @@ namespace LibraryMaster.Service
             string path = $"{FileLocations.ProjectFolder}\\Database";
             string type = data.GetType().ToString().Split(".").LastOrDefault();
 
+
             if(!Directory.Exists(path))
                 Directory.CreateDirectory(path);
 
