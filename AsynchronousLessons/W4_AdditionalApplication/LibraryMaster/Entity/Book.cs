@@ -12,19 +12,21 @@ namespace LibraryMaster.Entity
     {
         public string Writer { get; set; }
         public string Title { get; set; }
+        public Type BookType { get; set; }
 
         public string GetValues()
         {
-            return $"{Writer},{Title}";
+            return $"{Writer},{Title},{BookType}";
         }
 
         public void SetValues(string data)
         {
             string[] values = data.Split(',');
-            if (values.Length == 2)
+            if (values.Length == 3)
             {
                 Writer = values[0];
                 Title = values[1];
+                BookType = values[2]
             }
             else
             {
