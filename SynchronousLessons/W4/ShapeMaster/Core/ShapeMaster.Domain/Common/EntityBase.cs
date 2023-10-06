@@ -8,6 +8,7 @@ namespace ShapeMaster.Domain.Common
 {
     internal class EntityBase<Tkey>
     {
+
         public Tkey Id { get; set; }
 
         public DateTimeOffset CreatedOn { get; set; }
