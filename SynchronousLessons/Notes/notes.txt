@@ -1,5 +1,6 @@
 ﻿
 /**
+-
 - **Proje Dili**: Türkçe veya İngilizce tercih edilmeli. Türkçe önerilir.
 - **.ForEach() Kullanımı**: Listelerde her eleman için işlem yapmak için .ForEach() kullanılır, Linq ile tek satırda yapılabilir.
 - **OOP İpucu**: Ortak alanları grupla, örneğin Student ve Teacher sınıflarında ortak alanlar varsa Person sınıfında birleştir.
