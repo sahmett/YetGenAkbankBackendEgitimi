@@ -401,3 +401,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/AsynchronousLessons/W6/MVC_DB_APP/ReDoMusic/ReDoReMusic.Persistence/PrivateInformation.json
