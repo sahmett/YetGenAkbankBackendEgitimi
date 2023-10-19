@@ -12,7 +12,7 @@ namespace ReDoReMusic.Domain.Entities
 	public class Instrument : EntityBase<Guid>
 	{
 		public string Name { get; set; }
-		public string Brand { get; set; }
+		public Brand Brand { get; set; }
 		public string Model { get; set; }
 		public Enum.Color Color { get; set; }
 		public string ProductionYear { get; set; }

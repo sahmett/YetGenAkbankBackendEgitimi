@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using ReDoReMusic.Persistence.Context;
@@ -11,9 +12,11 @@ using ReDoReMusic.Persistence.Context;
 namespace ReDoReMusic.Persistence.Migrations
 {
     [DbContext(typeof(ReDoReMusicDbContext))]
-    partial class ReDoReMusicDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231018163033_create_new_instrument_brand")]
+    partial class create_new_instrument_brand
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
