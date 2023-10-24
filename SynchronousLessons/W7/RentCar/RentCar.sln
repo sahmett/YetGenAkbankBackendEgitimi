@@ -9,6 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCar.BlazorClient", "Ren
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCar.WebApi", "BlazorApp1\RentCar.WebApi\RentCar.WebApi.csproj", "{FB85D354-1ED2-42BA-8978-A652ADF6CEEB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{79973471-C789-49BA-885E-943F03EEE57C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructor", "Infrastructor", "{6CC80990-A12A-4BFB-8C02-E9DEAF2ADAFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{AD74410F-E896-4F4F-A0BD-8EFA47C65117}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCar.Persistence", "Infrastructor\RentCar.Persistence\RentCar.Persistence.csproj", "{552E8957-AA29-403F-B23E-EA7D9D2DAB7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +35,19 @@ Global
 		{FB85D354-1ED2-42BA-8978-A652ADF6CEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB85D354-1ED2-42BA-8978-A652ADF6CEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB85D354-1ED2-42BA-8978-A652ADF6CEEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{552E8957-AA29-403F-B23E-EA7D9D2DAB7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{552E8957-AA29-403F-B23E-EA7D9D2DAB7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{552E8957-AA29-403F-B23E-EA7D9D2DAB7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{552E8957-AA29-403F-B23E-EA7D9D2DAB7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EDF9D96C-F796-4D1A-9FA7-7019F763838D} = {79973471-C789-49BA-885E-943F03EEE57C}
+		{A6FBCFF8-FE4D-463C-A8F1-83ABA4969604} = {AD74410F-E896-4F4F-A0BD-8EFA47C65117}
+		{FB85D354-1ED2-42BA-8978-A652ADF6CEEB} = {AD74410F-E896-4F4F-A0BD-8EFA47C65117}
+		{552E8957-AA29-403F-B23E-EA7D9D2DAB7C} = {6CC80990-A12A-4BFB-8C02-E9DEAF2ADAFC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A287BE03-2D56-40EE-970B-4E5E35F502AB}
