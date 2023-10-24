@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarMatik.WebApi", "CarMatik
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarMatic.BlazorClient", "CarMatic.BlazorClient\CarMatic.BlazorClient.csproj", "{5920A7A2-BC6F-4D63-8E26-8EEC55FB6CCC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarMatik.MVCClient", "CarMatik.MVCClient\CarMatik.MVCClient.csproj", "{CDC6B959-2C00-41B8-9904-8969F18A8998}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5920A7A2-BC6F-4D63-8E26-8EEC55FB6CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5920A7A2-BC6F-4D63-8E26-8EEC55FB6CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5920A7A2-BC6F-4D63-8E26-8EEC55FB6CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDC6B959-2C00-41B8-9904-8969F18A8998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC6B959-2C00-41B8-9904-8969F18A8998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC6B959-2C00-41B8-9904-8969F18A8998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC6B959-2C00-41B8-9904-8969F18A8998}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
