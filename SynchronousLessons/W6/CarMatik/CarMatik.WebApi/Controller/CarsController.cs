@@ -19,10 +19,22 @@ namespace CarMatik.WebApi.Controller
 		[HttpGet("{id:guid}")]
 		public IActionResult GetById(Guid id) 
 		{
-			var car = CarsContext.LuxuryCars.FirstOrDefault(x => x.Id == id);
+			//var car = CarsContext.LuxuryCars.FirstOrDefault(x => x.Id == id);
+
+			//return Ok(car);
+
+			if (id == Guid.Empty)
+			{
+				return BadRequest("Id cannot be empty.");
+			}
+            var car = CarsContext.LuxuryCars.FirstOrDefault(x => x.Id == id);
+
+			if (car == null)
+			{
+				return NotFound("The car requested with given Id was not found.");
+			}
 
 			return Ok(car);
-
-		}
+        }
 	}
 }
