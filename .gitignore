@@ -402,3 +402,5 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 /AsynchronousLessons/W6/MVC_DB_APP/ReDoMusic/ReDoReMusic.Persistence/PrivateInformation.json
+/SynchronousLessons/W7/RentCar/Infrastructor/RentCar.Persistence/FileName.json
+/SynchronousLessons/W7/RentCar/Infrastructor/RentCar.Persistence/PrivateInformation.json
