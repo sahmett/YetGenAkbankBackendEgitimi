@@ -31,7 +31,7 @@ namespace RentCar.WebApi.Controllers
                 FirstName = createUserRequest.FirstName,
                 LastName = createUserRequest.LastName,
                 CreatedOn = DateTime.UtcNow,
-                CreatedByUserId = "hakan"
+                CreatedByUserId = "admin"
             };
 
             _context.Users.Add(user);
