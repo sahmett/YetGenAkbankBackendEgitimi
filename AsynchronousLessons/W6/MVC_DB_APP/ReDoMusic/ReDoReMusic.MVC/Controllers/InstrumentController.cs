@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using ReDoReMusic.Domain.Entities;
 using ReDoReMusic.Domain.Enum;
+using ReDoReMusic.MVC.Models;
 using ReDoReMusic.Persistence.Context;
 
 namespace ReDoReMusic.MVC.Controllers
@@ -52,14 +53,62 @@ namespace ReDoReMusic.MVC.Controllers
 			return AddInstrument();
 		}
 
+		//public IActionResult DeleteInstrument(string id)
+		//{
+		//	var instrument = _context.InstrumentsDb.Where(x => x.Id == Guid.Parse(id)).FirstOrDefault();
+		//	_context.InstrumentsDb.Remove(instrument);
+		//	_context.SaveChanges();
+
+		//	return RedirectToAction("index");
+		//}
+
+		[Route("[controller]/[action]/{id}")]
 		public IActionResult DeleteInstrument(string id)
 		{
-			var instrument = _context.InstrumentsDb.Where(x=> x.Id==Guid.Parse(id)).FirstOrDefault();
+			var instrument = _context.InstrumentsDb
+				.FirstOrDefault(x => x.Id == Guid.Parse(id));
+
+			if (instrument == null)
+			{
+				return NotFound();
+			}
+
 			_context.InstrumentsDb.Remove(instrument);
 			_context.SaveChanges();
 
-			return RedirectToAction("index");
+			return RedirectToAction("Index");
 		}
+
+
+
+		[HttpPost]
+        public IActionResult UpdateInstrument(string id, [FromBody] UpdateInstrument updateInstrument) 
+		{
+
+            if (id is null)
+            {
+                return NotFound();
+            }
+
+            var instrument = _context.InstrumentsDb.Where(x => x.Id == Guid.Parse(id)).FirstOrDefault();
+
+            if (instrument is null)
+            {
+                return NotFound();
+			}
+
+            //update instrument modelle baglantılı kısmı
+            instrument.Name = updateInstrument.Name;
+            instrument.Brand = updateInstrument.Brand;
+            instrument.Model = updateInstrument.Model;
+            instrument.Color = updateInstrument.Color;
+            instrument.ProductionYear = updateInstrument.ProductionYear;
+            instrument.Price = updateInstrument.Price;
+
+            _context.SaveChanges();
+
+            return AddInstrument();
+        }
 
 
 

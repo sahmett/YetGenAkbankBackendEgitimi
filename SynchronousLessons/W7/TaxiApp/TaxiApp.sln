@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaxiApp.Domain", "TaxiApp.Domain", "{C0AE709D-A168-411D-9749-7D38709C2DF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxiApp.Domain", "TaxiApp.Domain\TaxiApp.Domain.csproj", "{23E209E3-7FBB-495B-9CFE-063CF0AEBFFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23E209E3-7FBB-495B-9CFE-063CF0AEBFFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E209E3-7FBB-495B-9CFE-063CF0AEBFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23E209E3-7FBB-495B-9CFE-063CF0AEBFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23E209E3-7FBB-495B-9CFE-063CF0AEBFFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{23E209E3-7FBB-495B-9CFE-063CF0AEBFFD} = {C0AE709D-A168-411D-9749-7D38709C2DF8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1397FA2D-5CD5-4E11-A8A8-AC58D2678E85}
+	EndGlobalSection
+EndGlobal
