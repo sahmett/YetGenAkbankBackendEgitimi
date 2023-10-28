@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ReDoReMusic.Domain.Common;
 using ReDoReMusic.Domain.Entities;
 using ReDoReMusic.Domain.Enum;
 using ReDoReMusic.MVC.Models;
 using ReDoReMusic.Persistence.Context;
+using System.Diagnostics.Metrics;
 
 namespace ReDoReMusic.MVC.Controllers
 {
@@ -35,7 +37,7 @@ namespace ReDoReMusic.MVC.Controllers
 			//firs or def gerekli mi?
 			var brand = _context.Brands.Where(x => x.Id == Guid.Parse(instrumentBrandId)).FirstOrDefault(); //firs or def gerekli mi?
 
-			var instrument = new Instrument()
+			var instrument = new Domain.Entities.Instrument()
 			{
 				Id = Guid.NewGuid(),
 				Name = instrumentName,
@@ -46,7 +48,6 @@ namespace ReDoReMusic.MVC.Controllers
 				Price = instrumentPrice,
 				
 		};
-
 			_context.InstrumentsDb.Add(instrument);
 			_context.SaveChanges();
 
@@ -79,18 +80,27 @@ namespace ReDoReMusic.MVC.Controllers
 			return RedirectToAction("Index");
 		}
 
+		public IActionResult UpdateInstrument()  //brandları ve inst yolluyoruz ki oradan form çeksin
+		{
+			var viewModel = new InstrumentViewModel
+			{
+                Brands = _context.Brands.ToList(),
+				Instruments = _context.InstrumentsDb.ToList()
+			};
 
+			return View(viewModel);
+		}
 
-		[HttpPost]
-        public IActionResult UpdateInstrument(string id, [FromBody] UpdateInstrument updateInstrument) 
+        [HttpPost]
+        public IActionResult UpdateInstrument(string instrumentId, [FromBody] UpdateInstrument updateInstrument) 
 		{
 
-            if (id is null)
+            if (instrumentId is null)
             {
                 return NotFound();
             }
 
-            var instrument = _context.InstrumentsDb.Where(x => x.Id == Guid.Parse(id)).FirstOrDefault();
+            var instrument = _context.InstrumentsDb.Where(x => x.Id == Guid.Parse(instrumentId)).FirstOrDefault();
 
             if (instrument is null)
             {
@@ -107,10 +117,8 @@ namespace ReDoReMusic.MVC.Controllers
 
             _context.SaveChanges();
 
-            return AddInstrument();
+            return UpdateInstrument();
         }
-
-
 
 	}
 }
