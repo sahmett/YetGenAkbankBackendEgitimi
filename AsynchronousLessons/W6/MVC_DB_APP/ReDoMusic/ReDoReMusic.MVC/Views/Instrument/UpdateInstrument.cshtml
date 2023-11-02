@@ -15,7 +15,7 @@
 		<input type="text" class="form-control"  value=@Model.Instrument.Name name ="instrumentName">
 	</div>
 
-	<div class="mb-3 mt-3">
+@* 	<div class="mb-3 mt-3">
 		<label class="form-label">Instrument Brand:</label>
 		<select class="form-control" value=@Model.Instrument.Brand.Name name ="instrumentBrandId">
 			@foreach (var brand in Model.Brands)
@@ -31,6 +31,17 @@
 			}
 		</select>
 	</div>
+ *@
+	<div class="mb-3 mt-3">
+    <label class="form-label">Instrument Brand:</label>
+    <select class="form-control" name="instrumentBrandId">
+        @foreach (var brand in Model.Brands)
+        {
+            <option value="@brand.Id" @(brand.Name == Model.Instrument.Brand.Name ? "selected" : "")>@brand.Name</option>
+        }
+    </select>
+</div>
+
 
 
 	<div class="mb-3 mt-3">
@@ -38,21 +49,23 @@
 		<input type="text" class="form-control"  value=@Model.Instrument.Model name ="instrumentModel">
 	</div>
 
-<div class="mb-3 mt-3">
-    <label class="form-label">Instrument Color:</label>
-    <select class="form-control" name="instrumentColor">
-        <option value="Red" @(Model.Instrument.Color == "Red" ? "selected" : "")>Red</option>
-        <option value="Blue" @(Model.Instrument.Color == "Blue" ? "selected" : "")>Blue</option>
-        <option value="Green" @(Model.Instrument.Color == "Green" ? "selected" : "")>Green</option>
-        <option value="Yellow" @(Model.Instrument.Color == "Yellow" ? "selected" : "")>Yellow</option>
-        <option value="Orange" @(Model.Instrument.Color == "Orange" ? "selected" : "")>Orange</option>
-        <option value="Purple" @(Model.Instrument.Color == "Purple" ? "selected" : "")>Purple</option>
-        <option value="Pink" @(Model.Instrument.Color == "Pink" ? "selected" : "")>Pink</option>
-        <option value="Teal" @(Model.Instrument.Color == "Teal" ? "selected" : "")>Teal</option>
-        <option value="Brown" @(Model.Instrument.Color == "Brown" ? "selected" : "")>Brown</option>
-        <option value="Gray" @(Model.Instrument.Color == "Gray" ? "selected" : "")>Gray</option>
-    </select>
-</div>
+	<div class="mb-3 mt-3">
+		<label class="form-label">Instrument Color:</label>
+		<select class="form-control" name="instrumentColor">
+			<option value="Red">Red</option>
+			<option value="Blue">Blue</option>
+			<option value="Green">Green</option>
+			<option value="Yellow">Yellow</option>
+			<option value="Orange">Orange</option>
+			<option value="Purple">Purple</option>
+			<option value="Pink">Pink</option>
+			<option value="Teal">Teal</option>
+			<option value="Brown">Brown</option>
+			<option value="Gray">Gray</option>
+		</select>
+	</div>
+
+
 
 
 	<div class="mb-3 mt-3">

@@ -99,34 +99,73 @@ namespace ReDoReMusic.MVC.Controllers
 			return View(viewModel);
 		}
 
-        [HttpPost]
-        public IActionResult UpdateInstrument(string instrumentId, [FromBody] UpdateInstrument updateInstrument) 
+  //      [HttpPost]
+  //      public IActionResult UpdateInstrument(string instrumentId, [FromBody] UpdateInstrument updateInstrument) 
+		//{
+
+  //          if (instrumentId is null)
+  //          {
+  //              return NotFound();
+  //          }
+
+  //          var instrument = _context.InstrumentsDb.Where(x => x.Id == Guid.Parse(instrumentId)).FirstOrDefault();
+
+  //          if (instrument is null)
+  //          {
+  //              return NotFound();
+		//	}
+
+  //          //update instrument modelle baglantılı kısmı
+  //          instrument.Name = updateInstrument.Name;
+  //          instrument.Brand = updateInstrument.Brand;
+  //          instrument.Model = updateInstrument.Model;
+  //          instrument.Color = updateInstrument.Color;
+  //          instrument.ProductionYear = updateInstrument.ProductionYear;
+  //          instrument.Price = updateInstrument.Price;
+
+  //          _context.SaveChanges();
+
+  //          return RedirectToAction("Index"); //doğru mu?
+  //      }
+
+		[HttpPost]
+		public IActionResult UpdateInstrument(string id, string instrumentName, string instrumentBrandId,
+	string instrumentModel, string instrumentColor, string instrumentProductionYear, decimal instrumentPrice)
 		{
 
-            if (instrumentId is null)
-            {
-                return NotFound();
-            }
-
-            var instrument = _context.InstrumentsDb.Where(x => x.Id == Guid.Parse(instrumentId)).FirstOrDefault();
-
-            if (instrument is null)
-            {
-                return NotFound();
+			if (id is null)
+			{
+				return NotFound();
 			}
 
-            //update instrument modelle baglantılı kısmı
-            instrument.Name = updateInstrument.Name;
-            instrument.Brand = updateInstrument.Brand;
-            instrument.Model = updateInstrument.Model;
-            instrument.Color = updateInstrument.Color;
-            instrument.ProductionYear = updateInstrument.ProductionYear;
-            instrument.Price = updateInstrument.Price;
+			var instrument = _context.InstrumentsDb.Where(x => x.Id == Guid.Parse(id)).FirstOrDefault();
 
-            _context.SaveChanges();
+			if (instrument is null)
+			{
+				return NotFound();
+			}
 
-            return RedirectToAction(""); //doğru mu?
-        }
+			// Güncellenecek enstrüman bilgilerini güncelle
+			instrument.Name = instrumentName;
+			instrument.Brand = _context.Brands.FirstOrDefault(x => x.Id == Guid.Parse(instrumentBrandId)); // Marka güncelle
+			instrument.Model = instrumentModel;
+
+			if (Enum.TryParse(typeof(Color), instrumentColor, out object color))
+			{
+				instrument.Color = (Color)color;
+			}
+			else
+			{
+				// Belirli bir hata durumu ile başa çıkmak için gerekli işlemler
+			}
+			
+			instrument.ProductionYear = instrumentProductionYear;
+			instrument.Price = instrumentPrice;
+
+			_context.SaveChanges();
+
+			return RedirectToAction("Index"); // Güncelleme tamamlandıktan sonra Index aksiyonuna yönlendir
+		}
 
 	}
 }
