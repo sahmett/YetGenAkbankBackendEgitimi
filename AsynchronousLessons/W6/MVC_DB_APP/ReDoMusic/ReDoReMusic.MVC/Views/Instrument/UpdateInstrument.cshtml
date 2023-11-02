@@ -15,23 +15,6 @@
 		<input type="text" class="form-control"  value=@Model.Instrument.Name name ="instrumentName">
 	</div>
 
-@* 	<div class="mb-3 mt-3">
-		<label class="form-label">Instrument Brand:</label>
-		<select class="form-control" value=@Model.Instrument.Brand.Name name ="instrumentBrandId">
-			@foreach (var brand in Model.Brands)
-			{
-				if (brand.Name == Model.Instrument.Brand.Name)
-				{
-					<option value="@brand.Id" selected>@brand.Name</option> <!-- Seçili marka için 'selected' özelliği -->
-				}
-				else
-				{
-					<option value="@brand.Id">@brand.Name</option>
-				}
-			}
-		</select>
-	</div>
- *@
 	<div class="mb-3 mt-3">
     <label class="form-label">Instrument Brand:</label>
     <select class="form-control" name="instrumentBrandId">
@@ -41,8 +24,6 @@
         }
     </select>
 </div>
-
-
 
 	<div class="mb-3 mt-3">
 		<label class="form-label">Instrument Model:</label>
@@ -64,9 +45,6 @@
 			<option value="Gray">Gray</option>
 		</select>
 	</div>
-
-
-
 
 	<div class="mb-3 mt-3">
 		<label class="form-label">Instrument ProductionYear:</label>
