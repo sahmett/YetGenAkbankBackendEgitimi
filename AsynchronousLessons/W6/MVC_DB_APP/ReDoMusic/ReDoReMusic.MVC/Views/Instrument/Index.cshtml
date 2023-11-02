@@ -13,21 +13,28 @@
 				<th>Production Year</th>
 				<th>Price</th>
 				<th>Delete</th>
-
+				<th>Update</th>
 			</tr>
 		</thead>
 		<tbody>
 			@foreach (var instrument in Model)
 			{
 				<tr>
+
 					<td>@instrument.Name</td>
 					<td>@instrument.Brand.Name</td>
 					<td>@instrument.Model</td>
 					<td>@instrument.Color</td>
 					<td>@instrument.ProductionYear</td>
 					<td>@instrument.Price</td>
+
 					<td><a asp-action="DeleteInstrument" asp-route-id="@instrument.Id"
-						class="btn btn-outline-danger">Delete</a></td> 
+						class="btn btn-outline-danger">Delete</a></td>
+
+					<td>
+						<a asp-action="UpdateInstrument" asp-route-id="@instrument.Id"
+						class="btn btn-outline-danger">Update</a></td>
+
 				</tr>
 			}
 		</tbody>

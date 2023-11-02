@@ -1,68 +1,33 @@
 ﻿@using ReDoReMusic.Domain.Entities;
 @model InstrumentViewModel
 
-@* <h2>Update Instrument Page</h2>
-
-<div class="container mt-3">
-	<h2>Instruments</h2>
-	<table class="table table-dark table-hover">
-		<thead>
-			<tr>
-				<th>Name</th>
-				<th>Brand</th>
-				<th>Model</th>
-				<th>Color</th>
-				<th>Production Year</th>
-				<th>Price</th>
-				<th>Delete</th>
-
-			</tr>
-		</thead>
-		<tbody>
-			@foreach (var instrument in Model.Instruments)
-			{
-				<tr>
-					<td>@instrument.Name</td>
-					<td>@instrument.Brand.Name</td>
-					<td>@instrument.Model</td>
-					<td>@instrument.Color</td>
-					<td>@instrument.ProductionYear</td>
-					<td>@instrument.Price</td>
-					<td>
-						<a asp-action="UpdateInstrument" asp-route-id="@instrument.Id"
-						   class="btn btn-outline-danger">Update</a>
-					</td>
-				</tr>
-			}
-		</tbody>
-	</table>
-</div> *@
-
-<h2>Update Instrument</h2>
+<h2>Update Instrument Page V1 </h2>
 
 <form method="post">
 
 	<div class="mb-3 mt-3">
-		<label class="form-label">Instrument Select by Name:</label>
-		<select class="form-control" name="instrumentId">
-			@foreach (var instrument in Model.Instruments)
-			{
-				<option value="@instrument.Id">@instrument.Name</option>
-			}
-		</select>
+		<label class="form-label">Selected Instrument Id:</label>
+		<input disabled type="text" class="form-control"  value=@Model.Instrument.Id name="id">
 	</div>
 
 	<div class="mb-3 mt-3">
 		<label class="form-label">Instrument Name:</label>
-		<input type="text" class="form-control" placeholder="Enter Instrument Name" name="instrumentName">
+		<input type="text" class="form-control"  value=@Model.Instrument.Name name ="instrumentName">
 	</div>
 
 	<div class="mb-3 mt-3">
 		<label class="form-label">Instrument Brand:</label>
-		<select class="form-control" name="instrumentBrandId">
+		<select class="form-control" value=@Model.Instrument.Brand.Name name ="instrumentBrandId">
 			@foreach (var brand in Model.Brands)
 			{
-				<option value="@brand.Id">@brand.Name</option>
+				if (brand.Name == Model.Instrument.Brand.Name)
+				{
+					<option value="@brand.Id" selected>@brand.Name</option> <!-- Seçili marka için 'selected' özelliği -->
+				}
+				else
+				{
+					<option value="@brand.Id">@brand.Name</option>
+				}
 			}
 		</select>
 	</div>
@@ -70,34 +35,36 @@
 
 	<div class="mb-3 mt-3">
 		<label class="form-label">Instrument Model:</label>
-		<input type="text" class="form-control" placeholder="Enter Instrument Model" name="instrumentModel">
+		<input type="text" class="form-control"  value=@Model.Instrument.Model name ="instrumentModel">
 	</div>
 
-	<div class="mb-3 mt-3">
-		<label class="form-label">Instrument Color:</label>
-		<select class="form-control" name="instrumentColor">
-			<option value="Red">Red</option>
-			<option value="Blue">Blue</option>
-			<option value="Green">Green</option>
-			<option value="Yellow">Yellow</option>
-			<option value="Orange">Orange</option>
-			<option value="Purple">Purple</option>
-			<option value="Pink">Pink</option>
-			<option value="Teal">Teal</option>
-			<option value="Brown">Brown</option>
-			<option value="Gray">Gray</option>
-		</select>
-	</div>
+<div class="mb-3 mt-3">
+    <label class="form-label">Instrument Color:</label>
+    <select class="form-control" name="instrumentColor">
+        <option value="Red" @(Model.Instrument.Color == "Red" ? "selected" : "")>Red</option>
+        <option value="Blue" @(Model.Instrument.Color == "Blue" ? "selected" : "")>Blue</option>
+        <option value="Green" @(Model.Instrument.Color == "Green" ? "selected" : "")>Green</option>
+        <option value="Yellow" @(Model.Instrument.Color == "Yellow" ? "selected" : "")>Yellow</option>
+        <option value="Orange" @(Model.Instrument.Color == "Orange" ? "selected" : "")>Orange</option>
+        <option value="Purple" @(Model.Instrument.Color == "Purple" ? "selected" : "")>Purple</option>
+        <option value="Pink" @(Model.Instrument.Color == "Pink" ? "selected" : "")>Pink</option>
+        <option value="Teal" @(Model.Instrument.Color == "Teal" ? "selected" : "")>Teal</option>
+        <option value="Brown" @(Model.Instrument.Color == "Brown" ? "selected" : "")>Brown</option>
+        <option value="Gray" @(Model.Instrument.Color == "Gray" ? "selected" : "")>Gray</option>
+    </select>
+</div>
+
 
 	<div class="mb-3 mt-3">
 		<label class="form-label">Instrument ProductionYear:</label>
-		<input type="text" class="form-control" placeholder="Enter Instrument Name" name="instrumentProductionYear">
+		<input type="text" class="form-control" value=@Model.Instrument.ProductionYear  name="instrumentProductionYear">
 	</div>
 	<div class="mb-3 mt-3">
 		<label class="form-label">Instrument Price:</label>
-		<input type="text" class="form-control" placeholder="Enter Instrument Name" name="instrumentPrice">
+		<input type="text" class="form-control" value=@Model.Instrument.Price  name="instrumentPrice">
 	</div>
 
 	<button type="submit" class="btn btn-primary">Update Instrument</button>
 
 </form>
+

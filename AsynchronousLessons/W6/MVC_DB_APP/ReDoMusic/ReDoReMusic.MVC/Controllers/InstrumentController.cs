@@ -23,7 +23,7 @@ namespace ReDoReMusic.MVC.Controllers
 			return View(instruments);
 		}
 
-		
+		[HttpGet]
 		public IActionResult AddInstrument()  //brandları yolluyoruz ki oradan form çeksin
 		{
 			var brands = _context.Brands.ToList();
@@ -80,12 +80,20 @@ namespace ReDoReMusic.MVC.Controllers
 			return RedirectToAction("Index");
 		}
 
-		public IActionResult UpdateInstrument()  //brandları ve inst yolluyoruz ki oradan form çeksin
+		[HttpGet]
+		public IActionResult UpdateInstrument(string id)  //brandları ve inst yolluyoruz ki oradan form çeksin
 		{
+			var instrument = _context.InstrumentsDb.Where(x => x.Id == Guid.Parse(id)).FirstOrDefault();
+			
+			if (instrument is null)
+			{
+				return NotFound();
+			}
 			var viewModel = new InstrumentViewModel
 			{
-                Brands = _context.Brands.ToList(),
-				Instruments = _context.InstrumentsDb.ToList()
+				Brands = _context.Brands.ToList(),
+				Instruments = _context.InstrumentsDb.ToList(),
+				Instrument = instrument
 			};
 
 			return View(viewModel);
@@ -117,7 +125,7 @@ namespace ReDoReMusic.MVC.Controllers
 
             _context.SaveChanges();
 
-            return UpdateInstrument();
+            return RedirectToAction(""); //doğru mu?
         }
 
 	}
