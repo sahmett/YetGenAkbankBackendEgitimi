@@ -19,8 +19,8 @@ namespace ReDoReMusic.MVC.Controllers
 		}
 		public IActionResult Index()
 		{
-			var instruments = _context.InstrumentsDb.Include(x=>x.Brand).ToList(); //önemli model alır
-			return View(instruments);
+			var instruments = _context.InstrumentsDb.Include(x=>x.Brand).ToList(); //eager loading - Instrument nesnesini döndürürken onunla ilişkili Brand
+            return View(instruments);
 		}
 
 		[HttpGet]
