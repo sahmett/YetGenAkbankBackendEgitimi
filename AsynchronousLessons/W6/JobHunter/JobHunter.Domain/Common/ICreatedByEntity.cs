@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace JobHunter.Domain.Common
 {
-	public class EntityBase<Tkey> : IModifiedByEntity, ICreatedByEntity
+	public interface ICreatedByEntity
 	{
-		public Tkey Id { get; set; }
-		public DateTime? ModifiedOn { get; set; }
 		public DateTime CreatedOn { get; set; }
 
 	}
