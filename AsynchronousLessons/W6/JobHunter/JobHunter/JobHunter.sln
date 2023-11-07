@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{36042BC1-EB1C-4276-9632-D78F7BAE760A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{69E505DF-C4AA-4DBF-8CDA-49A43B0229B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobHunter.Domain", "..\JobHunter.Domain\JobHunter.Domain.csproj", "{F33F7B4F-F86B-4D80-8D28-FBFE00E844A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobHunter.Persistence", "..\JobHunter.Persistence\JobHunter.Persistence.csproj", "{5AA81A8D-DEA2-4B24-B7E2-C18F7A0EC01F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{BB2DD08B-8EFD-4B70-B0B4-F9F3CA40554D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobHunter.ConsoleApp", "..\JobHunter.ConsoleApp\JobHunter.ConsoleApp.csproj", "{8FA10F57-8429-414E-AD5C-539ABCEBE48F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F33F7B4F-F86B-4D80-8D28-FBFE00E844A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33F7B4F-F86B-4D80-8D28-FBFE00E844A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33F7B4F-F86B-4D80-8D28-FBFE00E844A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33F7B4F-F86B-4D80-8D28-FBFE00E844A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AA81A8D-DEA2-4B24-B7E2-C18F7A0EC01F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AA81A8D-DEA2-4B24-B7E2-C18F7A0EC01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AA81A8D-DEA2-4B24-B7E2-C18F7A0EC01F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AA81A8D-DEA2-4B24-B7E2-C18F7A0EC01F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA10F57-8429-414E-AD5C-539ABCEBE48F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA10F57-8429-414E-AD5C-539ABCEBE48F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA10F57-8429-414E-AD5C-539ABCEBE48F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA10F57-8429-414E-AD5C-539ABCEBE48F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F33F7B4F-F86B-4D80-8D28-FBFE00E844A0} = {36042BC1-EB1C-4276-9632-D78F7BAE760A}
+		{5AA81A8D-DEA2-4B24-B7E2-C18F7A0EC01F} = {69E505DF-C4AA-4DBF-8CDA-49A43B0229B2}
+		{8FA10F57-8429-414E-AD5C-539ABCEBE48F} = {BB2DD08B-8EFD-4B70-B0B4-F9F3CA40554D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBE0699F-FF12-40E1-BEE3-556FF6D50CBB}
+	EndGlobalSection
+EndGlobal
