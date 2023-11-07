@@ -3,6 +3,7 @@ using System;
 using JobHunter.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace JobHunter.Persistence.Migrations
 {
     [DbContext(typeof(JobHunterDbContext))]
-    partial class JobHunterDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231107160158_mig_2_update_JobPostsTable")]
+    partial class mig_2_update_JobPostsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
