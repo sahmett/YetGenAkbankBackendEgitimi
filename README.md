@@ -1,23 +1,23 @@
-# YetGenAkbankBackendEgitimi
+# YetGenAkbankBackendTraining
 
-## Proje Açıklaması
+## Project Description
 
-- Bu proje, Akbank Backend Eğitimi sırasında öğrenilen bilgileri ve becerileri uygulamak için oluşturulmuştur.
-- Bu proje, YetkinGençler tarafından sağlanan Akbank Backend Eğitimi kapsamında geliştirilen uygulamaları içerir.
-- Proje, .NET ve C# gibi teknolojileri kullanarak yönetimi uygulamasını içerir.
+- This project has been created to apply the knowledge and skills acquired during the Akbank Backend Training.
+- The project encompasses applications developed within the scope of the Akbank Backend Training provided by YetkinGençler.
+- It includes the implementation of management using technologies such as .NET and C#.
 
-## Proje Detayları
+## Project Details
 
-- Proje Adı: YetGenAkbankBackendEgitimi
-- Dil: C#
-- Kullanılan Teknolojiler: .NET, Visual Studio
-- Oluşturma Tarihi: Ekim 2023
-  
-## Eğitim Konuları
+- Project Name: YetGenAkbankBackendTraining
+- Language: C#
+- Technologies Used: .NET, Visual Studio
+- Creation Date: October 2023
 
-Bu eğitim programı aşağıdaki konuları içermektedir:
+## Training Topics
 
-1. Object Oriented Programming
+This training program covers the following topics:
+
+1. Object-Oriented Programming
 2. S.O.L.I.D. Principles
 3. ORM Tools and Entity Framework Core
 4. Working with APIs
@@ -29,11 +29,10 @@ Bu eğitim programı aşağıdaki konuları içermektedir:
 10. Microservice Architecture
 11. Docker
 
-## YetGen Nedir?
+## What is YetGen?
 
-[Yetkin Gençler](https://yetkingencler.com/jump/), 21. yüzyılın yetkinliklerini, iş dünyasını, girişimciliği ve farklı düşünme yöntemlerini öğreterek gençlerin kariyerlerini ve bakış açılarını geliştiren bir eğitim programıdır. Bu program, lise ve üniversite eğitimlerinde öğretilmeyen deneyimlere odaklanmaktadır ve ücretsiz ve çevrimiçi olarak sunulmaktadır.
+[Yetkin Gençler](https://yetkingencler.com/jump/) is an educational program that enhances the careers and perspectives of young people by teaching 21st-century skills, business, entrepreneurship, and different thinking methods. This program focuses on experiences not taught in high school and university education, and it is offered for free and online.
 
-## YetGen Jump Nedir?
+## What is YetGen Jump?
 
-[YetGen Jump](https://yetkingencler.com/jump/) ise YetGen mezunlarının katılabileceği, belirli bir alanda derinlemesine eğitim ve istihdam fırsatlarını sunan bir programdır. YetGen Jump, YetGen programını başarıyla tamamlayan katılımcılara Türkiye'nin önde gelen kurumlarında istihdam fırsatları sunmaktadır.
-
+[YetGen Jump](https://yetkingencler.com/jump/) is a program that YetGen graduates can participate in, offering in-depth training and employment opportunities in a specific field. YetGen Jump provides employment opportunities in leading institutions in Turkey to participants who successfully complete the YetGen program.
