@@ -1,5 +1,6 @@
 ﻿ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RentCar.Domain.Utilties;
 
 namespace RentCar.WebApi.Controllers
 {
@@ -7,22 +8,41 @@ namespace RentCar.WebApi.Controllers
     [ApiController]
     public class TextsController : ControllerBase
     {
-        [HttpGet("[action]")]
+		private readonly RequestCountService _requestCountService;
+
+		public TextsController()
+		{
+			_requestCountService = new();
+		}
+
+		[HttpGet("[action]")]
         public string TrimText(string text)
         {
-            return text.Trim();
+			_requestCountService.Count += 1;
+			return text.Trim();
         }
 
         [HttpGet("[action]/{text}")]
         public string UpperText(string text)
         {
+			_requestCountService.Count += 1;
+
             return text.ToUpper();
         }
 
         [HttpPost("[action]")]
         public string LowerText([FromBody]string text)
         {
+            _requestCountService.Count += 1;
             return text.ToLower();
         }
-    }
+
+		[HttpGet("GetRequestCount")]
+		public IActionResult GetRequestCount()
+		{
+			_requestCountService.Count += 1;
+
+			return Ok(_requestCountService.Count);
+		}
+	}
 }
