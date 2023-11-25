@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCar.Domain", "RentCar.Domain\RentCar.Domain.csproj", "{EDF9D96C-F796-4D1A-9FA7-7019F763838D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentCar.Domain", "RentCar.Domain\RentCar.Domain.csproj", "{EDF9D96C-F796-4D1A-9FA7-7019F763838D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCar.BlazorClient", "RentCar.BlazorClient\RentCar.BlazorClient.csproj", "{A6FBCFF8-FE4D-463C-A8F1-83ABA4969604}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentCar.BlazorClient", "RentCar.BlazorClient\RentCar.BlazorClient.csproj", "{A6FBCFF8-FE4D-463C-A8F1-83ABA4969604}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCar.WebApi", "BlazorApp1\RentCar.WebApi\RentCar.WebApi.csproj", "{FB85D354-1ED2-42BA-8978-A652ADF6CEEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentCar.WebApi", "BlazorApp1\RentCar.WebApi\RentCar.WebApi.csproj", "{FB85D354-1ED2-42BA-8978-A652ADF6CEEB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{79973471-C789-49BA-885E-943F03EEE57C}"
 EndProject
@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructor", "Infrastruc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{AD74410F-E896-4F4F-A0BD-8EFA47C65117}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCar.Persistence", "Infrastructor\RentCar.Persistence\RentCar.Persistence.csproj", "{552E8957-AA29-403F-B23E-EA7D9D2DAB7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentCar.Persistence", "Infrastructor\RentCar.Persistence\RentCar.Persistence.csproj", "{552E8957-AA29-403F-B23E-EA7D9D2DAB7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
