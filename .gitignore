@@ -406,3 +406,4 @@ FodyWeavers.xsd
 /SynchronousLessons/W7/RentCar/Infrastructor/RentCar.Persistence/PrivateInformation.json
 /AsynchronousLessons/W6/JobHunter/JobHunter/Contexts/JobHunterDbContext.cs
 /AsynchronousLessons/W6/JobHunter/JobHunter.Persistence/Contexts/JobHunterDbContext.cs
+/YetgenAkbankJump/YetgenAkbankJump.WebApi/appsettings.json
