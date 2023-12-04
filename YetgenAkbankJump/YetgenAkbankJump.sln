@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YetgenAkbankJump.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YetgenAkbankJump.Persistence", "YetgenAkbankJump.Persistence\YetgenAkbankJump.Persistence.csproj", "{4123FC07-71B9-4465-8B55-E94B27946A41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YetgenAkbankJump.WebApi", "YetgenAkbankJump.WebApi\YetgenAkbankJump.WebApi.csproj", "{CA5B75F6-C356-4A00-BEA7-BF618CBA9E31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YetgenAkbankJump.WebApi", "YetgenAkbankJump.WebApi\YetgenAkbankJump.WebApi.csproj", "{CA5B75F6-C356-4A00-BEA7-BF618CBA9E31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YetgenAkbankJump.MVC", "YetgenAkbankJump.MVC\YetgenAkbankJump.MVC.csproj", "{C2D3ADA7-5E27-493F-B04D-073770EF5BD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{CA5B75F6-C356-4A00-BEA7-BF618CBA9E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA5B75F6-C356-4A00-BEA7-BF618CBA9E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA5B75F6-C356-4A00-BEA7-BF618CBA9E31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2D3ADA7-5E27-493F-B04D-073770EF5BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2D3ADA7-5E27-493F-B04D-073770EF5BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2D3ADA7-5E27-493F-B04D-073770EF5BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2D3ADA7-5E27-493F-B04D-073770EF5BD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
