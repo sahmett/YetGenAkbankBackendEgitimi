@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,16 +9,12 @@ using System.Threading.Tasks;
 using YetgenAkbankJump.Domain.Entities;
 using YetgenAkbankJump.Domain.Identity;
 
+
 namespace YetgenAkbankJump.Persistence.Contexts
 {
-	public class ApplicationDbContext : DbContext
+	public class YetgenIdentityContext:IdentityDbContext<User,Role,Guid>
 	{
-		public DbSet<Student> Students { get; set; }
-		public DbSet<Product> Products { get; set; }
-		public DbSet<Category> Categories { get; set; }
-
-			
-		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> dbContextOptions):base(dbContextOptions)
+		public YetgenIdentityContext(DbContextOptions<YetgenIdentityContext> dbContextOptions) : base(dbContextOptions)
 		{
 		}
 
@@ -26,11 +23,9 @@ namespace YetgenAkbankJump.Persistence.Contexts
 			modelBuilder.ApplyConfigurationsFromAssembly(Assembly
 				.GetExecutingAssembly());
 
-			modelBuilder.Ignore<User>();
-			modelBuilder.Ignore<Role>();
-			modelBuilder.Ignore<UserSetting>();
-
-
+			modelBuilder.Ignore<Student>();
+			modelBuilder.Ignore<Product>();
+			modelBuilder.Ignore<Category>();	
 
 			base.OnModelCreating(modelBuilder);
 		}
