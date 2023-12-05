@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 using YetgenAkbankJump.Persistence.Contexts;
 using YetGenAkbankJump.WebApi.Services;
 
@@ -11,6 +12,11 @@ var connectionString = builder.Configuration.GetSection("YetgenPostgreSQLDB").Va
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
 	options.UseNpgsql(connectionString);
+});
+
+builder.Services.AddControllers().AddJsonOptions(opt =>
+{
+	opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
 });
 
 builder.Services.AddScoped<FakeDataService>();
