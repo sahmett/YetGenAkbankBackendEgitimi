@@ -8,13 +8,18 @@ namespace YetgenAkbankJump.Domain.Dtos
 {
 	public class ProductDto
 	{
-		public Guid Id { get; set; }
-		public string Name { get; set; }
+		//public Guid Id { get; set; }
+		//public string Name { get; set; }
 
-		public Guid CategoryId { get; set; }
-		public string CategoryName { get; set; }
+		//public Guid CategoryId { get; set; }
+		//public string CategoryName { get; set; }
 
 		public DateTimeOffset CreatedOn { get; set; }
+		public string Name { get; set; }
+
+		public Guid Id { get; set; }
+
+		public List<ProductGetAllCategoryDto> Categories { get; set; }
 
 
 	}
