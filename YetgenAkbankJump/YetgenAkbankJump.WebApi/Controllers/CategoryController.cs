@@ -17,49 +17,50 @@ namespace YetgenAkbankJump.WebApi.Controllers
 			this._applicationDbContext = applicationDbContext;
 		}
 
-		[HttpGet("{id}")]
+		[HttpPost]
+		public async Task<IActionResult> AddAsync(CategoryAddDto categoryAddDto, CancellationToken cancellationToken)
+		{
+
+			if (categoryAddDto is null)
+				return BadRequest("Category's name cannot be null");
+
+			var category = new Category()
+			{
+				Id = Guid.NewGuid(),
+				Name = categoryAddDto.Name,
+				CreatedByUserId = "kalaymaster",
+				CreatedOn = DateTimeOffset.UtcNow,
+				IsDeleted = false,
+			};
+
+			await _applicationDbContext.Categories.AddAsync(category, cancellationToken);
+
+			await _applicationDbContext.SaveChangesAsync(cancellationToken);
+
+			return Ok(category);
+		}
+
+
+		[HttpGet("{id:guid}")]
 		public async Task<IActionResult> GetByIdAsync(Guid id, CancellationToken cancellationToken)
 		{
 			var category = await _applicationDbContext
 				.Categories
 				.AsNoTracking()
-				.Include(x => x.Products)
 				.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
 
 			return Ok(category);
-		}	
+		}
 
 		[HttpGet]
-		public async Task<IActionResult> GetAlldAsync(CancellationToken cancellationToken)
+		public async Task<IActionResult> GetAllAsync(CancellationToken cancellationToken)
 		{
-			var categoryies = await _applicationDbContext
+			var categories = await _applicationDbContext
 				.Categories
 				.AsNoTracking()
 				.ToListAsync(cancellationToken);
 
-			return Ok(categoryies);
-		}
-
-		[HttpPost]
-		public async Task<IActionResult> AddAsync(CategoryAddDto categoryAddDto, CancellationToken cancellation)
-		{
-			if (categoryAddDto.Name is null)
-				return BadRequest("cannot be null");
-
-			var category = new Category()
-			{
-				Id= Guid.NewGuid(),
-				Name= categoryAddDto.Name,
-				CreatedByUserId="sak master",
-				CreatedOn = DateTime.UtcNow,
-				IsDeleted=false
-			};
-
-			await _applicationDbContext.Categories.AddAsync(category);
-
-			await _applicationDbContext.SaveChangesAsync();
-
-			return Ok(category);
+			return Ok(categories);
 		}
 
 	}

@@ -46,9 +46,9 @@ namespace YetgenAkbankJump.Persistence.Configurations
 			//Ör-> Categoryden >> bu kategorinin çok productu var, productun 1 kategorisi var
 			//Ör-> Producttan  >> bu productun bir kategorisi var, kategorinin çok productu var
 
-			builder.HasMany(x => x.Products)
-				.WithOne(x => x.Category)
-				.HasForeignKey(x => x.CategoryId);
+			//builder.HasMany(x => x.Products)
+			//	.WithOne(x => x.Category)
+			//	.HasForeignKey(x => x.CategoryId);
 
 			// Category ID
 

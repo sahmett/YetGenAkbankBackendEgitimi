@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Threading;
 using YetgenAkbankJump.Domain.Dtos;
 using YetgenAkbankJump.Domain.Entities;
 using YetgenAkbankJump.Persistence.Contexts;
@@ -25,7 +26,7 @@ namespace YetgenAkbankJump.WebApi.Controllers
 			var product = await _applicationDbContext
 				.Products
 				.AsNoTracking ()
-				.Include(x=>x.Category)
+				//.Include(x=>x.Category)
 				.FirstOrDefaultAsync (x=>x.Id==id,cancellationToken);
 
 			return Ok(product);
@@ -41,8 +42,8 @@ namespace YetgenAkbankJump.WebApi.Controllers
 				{
 					Id = x.Id,
 					Name = x.Name,
-					CategoryId = x.CategoryId,
-					CategoryName = x.Category.Name,
+					//CategoryId = x.CategoryId,
+					//CategoryName = x.Category.Name,
 					CreatedOn = x.CreatedOn
 				})
 				.ToListAsync(cancellationToken);
@@ -50,28 +51,67 @@ namespace YetgenAkbankJump.WebApi.Controllers
 			return Ok(products);
 		}
 
+
 		[HttpPost]
-		public async Task<IActionResult> AddAsync(ProductAddDto productAddDto, CancellationToken cancellation)
+		public async Task<IActionResult> AddAsync(ProductAddDto productAddDto, CancellationToken cancellationToken)
 		{
-			if (productAddDto.Name is null)
-				return BadRequest("cannot be null");
+			/*if (productAddDto.Name is null)
+			return BadRequest("cannot be null");
+
+		var product = new Product()
+		{
+			Id = Guid.NewGuid(),
+			Name = productAddDto.Name,
+			//CategoryId = productAddDto.CategoryId,
+			CreatedByUserId = "sak master",
+			CreatedOn = DateTime.UtcNow,
+			IsDeleted = false
+		};
+
+		await _applicationDbContext.Products.AddAsync(product);
+
+		await _applicationDbContext.SaveChangesAsync();
+		*/
+
+			if (productAddDto is null || string.IsNullOrEmpty(productAddDto.Name))
+				return BadRequest();
+
+			List<ProductCategory> productCategories = new List<ProductCategory>();
+
+			var id = Guid.NewGuid();
+
+			if (productAddDto.CategoryIds is not null && productAddDto.CategoryIds.Any())
+			{
+				foreach (var categoryId in productAddDto.CategoryIds)
+				{
+					var productCategory = new ProductCategory()
+					{
+						CategoryId = categoryId,
+						ProductId = id,
+						CreatedOn = DateTimeOffset.UtcNow,
+						CreatedByUserId = "kalaymaster"
+					};
+
+					productCategories.Add(productCategory);
+				}
+			}
+
 
 			var product = new Product()
 			{
-				Id = Guid.NewGuid(),
+				Id = id,
 				Name = productAddDto.Name,
-				CategoryId = productAddDto.CategoryId,
-				CreatedByUserId = "sak master",
-				CreatedOn = DateTime.UtcNow,
-				IsDeleted = false
+				CreatedByUserId = "kalaymaster",
+				CreatedOn = DateTimeOffset.UtcNow,
+				IsDeleted = false,
+				ProductCategories = productCategories
 			};
 
-			await _applicationDbContext.Products.AddAsync(product);
+			await _applicationDbContext.Products.AddAsync(product, cancellationToken);
 
-			await _applicationDbContext.SaveChangesAsync();
+			await _applicationDbContext.SaveChangesAsync(cancellationToken);
 
 			return Ok(product);
 		}
-
 	}
 }
