@@ -407,3 +407,5 @@ FodyWeavers.xsd
 /AsynchronousLessons/W6/JobHunter/JobHunter/Contexts/JobHunterDbContext.cs
 /AsynchronousLessons/W6/JobHunter/JobHunter.Persistence/Contexts/JobHunterDbContext.cs
 /YetgenAkbankJump/YetgenAkbankJump.WebApi/appsettings.json
+/YetgenAkbankJump/YetgenAkbankJump.MVC/appsettings.json
+/YetgenAkbankJump/YetgenAkbankJump.IdentityMVC/appsettings.json
