@@ -1,7 +1,38 @@
+using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
+using YetgenAkbankJump.Domain.Identity;
+using YetgenAkbankJump.Persistence.Contexts;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using YetgenAkbankJump.Domain.Identity;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var connectionString = builder.Configuration.GetSection("YetgenPostgreSQLDB").Value;
+
+builder.Services.AddDbContext<YetgenIdentityContext>(options =>
+{
+    options.UseNpgsql(connectionString);
+});
+
+
+builder.Services.AddSession();
+
+builder.Services.AddIdentity<User, Role>;
+
+
+
+
+
+
+
+
+
+
+
 
 var app = builder.Build();
 
@@ -19,6 +50,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
